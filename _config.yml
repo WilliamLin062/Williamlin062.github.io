@@ -1,0 +1,13 @@
+#Site
+deploy:
+  type: git
+  repo: https://github.com/WilliamLin062/Williamlin062.github.io
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+theme: diaspora
+title: william's space
+language: zh-TW
+keywords: React React-Native Unity Game 東引當兵 東引 當兵 2023
+
+#URL
+url: https://williamlin062.github.io/
