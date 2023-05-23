@@ -1,5 +1,5 @@
 ---
-title: Asp.NETWebForm前端傳遞資料到C#
+title: Asp.NET WebForm前端傳遞資料到C#
 date: 2023-05-23 14:43:01 
 tags: Asp.NET
 ---
