@@ -65,6 +65,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-AspNet-UpdatePanel-筆記" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" class="article-date">
+  <time datetime="2023-05-25T09:07:20.000Z" itemprop="datePublished">2023-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/">Asp.Net UpdatePanel筆記</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" data-id="cli2xcwjn000d5kup5lwmbhvt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-AspNET_WebForm_前端傳遞資料到C#" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" class="article-date">
@@ -104,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" data-id="cli2qng7c000b7oup7hz53dwd" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" data-id="cli2xcwjp000g5kup7bdx1sb0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li></ul>
@@ -174,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" data-id="cli2qng7f000e7oup4xzy2jo5" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" data-id="cli2xcwjp000i5kupfej195nd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
@@ -229,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/firebase%20IM/" data-id="cli2qng7i000m7oupcuin4e56" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/firebase%20IM/" data-id="cli2xcwjt000n5kupcty132b6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
@@ -281,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" data-id="cli2qng6x00017oup99wx62kz" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" data-id="cli2xcwjf00035kuphbe5f15c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -326,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/" data-id="cli2qng7e000d7oup3b8w56iy" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/" data-id="cli2xcwjl00095kup1rbt6m9f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li></ul>
@@ -380,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/" data-id="cli2qng7500097oupgc6y3ul4" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/" data-id="cli2xcwjj00075kupfay9gxes" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li></ul>
@@ -462,7 +502,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2020/09/24/tools/" data-id="cli2qng7h000j7oup44uvcvnr" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2020/09/24/tools/" data-id="cli2xcwk000195kup4spe22og" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
@@ -514,7 +554,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2020/09/23/Animations30Day3/" data-id="cli2qng77000a7oupaixufumx" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2020/09/23/Animations30Day3/" data-id="cli2xcwjn000c5kup4u1s71n4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li></ul>
@@ -561,61 +601,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2020/09/21/Animations30Day2/" data-id="cli2qng7200057oup11as6us4" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2020/09/21/Animations30Day2/" data-id="cli2xcwjm000a5kupe20e12e1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-css-30-Day1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/18/css-30-Day1/" class="article-date">
-  <time datetime="2020-09-18T06:12:42.000Z" itemprop="datePublished">2020-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/18/css-30-Day1/">Animation30 Day1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
-<li>TweenMaxTweenMax</li>
-<li>TimelineMax</li>
-<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
-<li>GSAP</li>
-</ul>
-<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2020/09/18/css-30-Day1/" data-id="cli2qng7g000h7oupb3r4esae" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
 
     </footer>
   </div>
@@ -649,7 +638,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitPage/" rel="tag">GitPage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitPage/" rel="tag">GitPage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
     </div>
   </div>
 
@@ -659,7 +648,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/2023%E7%95%B6%E5%85%B5/" style="font-size: 20px;">2023當兵</a> <a href="/tags/Asp-NET/" style="font-size: 10px;">Asp.NET</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/GitPage/" style="font-size: 10px;">GitPage</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/firebase/" style="font-size: 10px;">firebase</a> <a href="/tags/javaScript-lib/" style="font-size: 10px;">javaScript lib</a> <a href="/tags/pixijs/" style="font-size: 20px;">pixijs</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
+      <a href="/tags/2023%E7%95%B6%E5%85%B5/" style="font-size: 20px;">2023當兵</a> <a href="/tags/ASP-Net/" style="font-size: 10px;">ASP.Net</a> <a href="/tags/Asp-NET/" style="font-size: 10px;">Asp.NET</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/GitPage/" style="font-size: 10px;">GitPage</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/firebase/" style="font-size: 10px;">firebase</a> <a href="/tags/javaScript-lib/" style="font-size: 10px;">javaScript lib</a> <a href="/tags/pixijs/" style="font-size: 20px;">pixijs</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
     </div>
   </div>
 
@@ -681,6 +670,10 @@
       <ul>
         
           <li>
+            <a href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/">Asp.Net UpdatePanel筆記</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/">Asp.NET WebForm前端傳遞資料到C#</a>
           </li>
         
@@ -694,10 +687,6 @@
         
           <li>
             <a href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/">2023當兵心得-東引篇</a>
-          </li>
-        
-          <li>
-            <a href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/">2023 關西-東引當兵心得(韋昌嶺篇)</a>
           </li>
         
       </ul>
