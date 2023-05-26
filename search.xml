@@ -123,16 +123,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Asp.Net UpdatePanel筆記</title>
-    <url>/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>]]></content>
-      <tags>
-        <tag>ASP.Net</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Asp.NET WebForm前端傳遞資料到C#</title>
     <url>/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/</url>
     <content><![CDATA[<h1 id="使用-HiddenField"><a href="#使用-HiddenField" class="headerlink" title="使用 HiddenField"></a>使用 HiddenField</h1><h5 id="這是-ASP-的-HiddenField-控件"><a href="#這是-ASP-的-HiddenField-控件" class="headerlink" title="這是 ASP 的 HiddenField 控件"></a>這是 ASP 的 HiddenField 控件</h5><h6 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h6><ul>
@@ -192,6 +182,22 @@
       <tags>
         <tag>C#</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Asp.Net UpdatePanel筆記</title>
+    <url>/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>]]></content>
+      <tags>
+        <tag>ASP.Net</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c#去除HtmlTag</title>
+    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
+    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>Animation30 Day1</title>
