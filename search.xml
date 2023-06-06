@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo GitPage初次使用</title>
-    <url>/2020/09/15/2020-09-15/</url>
-    <content><![CDATA[<p > 前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>
-<p > 而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</p>
-
-<h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
-<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>GitPage</tag>
-      </tags>
+    <title>2023當兵心得-東引篇</title>
+    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
+<h3 id="第二階段-東引地須指揮部步兵連"><a href="#第二階段-東引地須指揮部步兵連" class="headerlink" title="第二階段-東引地須指揮部步兵連"></a>第二階段-東引地須指揮部步兵連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：(核心營區)分123寢，一寢比較大人數會比較多，166梯38人1寢就睡了20幾個士官寢也在一寢還有一個大的雜物區，二寢四張四人上下舖床，三寢沒睡到原本是曬衣間後來便隔離間<br>浴廁：(核心營區)好到不能再好了，除了水壓人多會太低洗澡不好洗大多沒甚麼好挑剔的<br>食物：慘到不能再慘一餐二至四道菜，不好吃就算了還分量稀少沒得加菜</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
+<p>物資匱乏(到4月初前連網路都沒有)</p>
+</blockquote>
+<h5 id="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"><a href="#東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等" class="headerlink" title="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"></a>東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等</h5><h5 id="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"><a href="#單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛" class="headerlink" title="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"></a>單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛</h5><h5 id="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"><a href="#跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了" class="headerlink" title="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"></a>跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了</h5><h5 id="除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試"><a href="#除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試" class="headerlink" title="除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試"></a>除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試</h5><blockquote>
+<p>站哨要幹嘛?看海阿看天空阿，不得不說風景很好風很涼</p>
+</blockquote>
+<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><blockquote>
+<p>當兵好花錢阿</p>
+</blockquote>
+<h5 id="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"><a href="#踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡" class="headerlink" title="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"></a>踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡</h5><h5 id="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"><a href="#食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴" class="headerlink" title="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"></a>食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴</h5><blockquote>
+<p>怎麼一直在領錢啊</p>
+</blockquote>
+<h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>]]></content>
   </entry>
   <entry>
     <title>2023 關西-東引當兵心得(關西篇)</title>
@@ -48,40 +44,27 @@
       </tags>
   </entry>
   <entry>
-    <title>2023 關西-東引當兵心得(韋昌嶺篇)</title>
-    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/</url>
-    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
-<h3 id="第二階段過度-韋昌嶺「馬祖前送官兵轉運站」"><a href="#第二階段過度-韋昌嶺「馬祖前送官兵轉運站」" class="headerlink" title="第二階段過度-韋昌嶺「馬祖前送官兵轉運站」"></a>第二階段過度-韋昌嶺「馬祖前送官兵轉運站」</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：非常老舊，在二三樓左右兩邊都有大通鋪提供給要去東引但是沒船滯留的人睡因為通常都不會有人睡所以床上灰塵很多，沒開窗戶會悶熱並成為病毒養蠱中心<br>浴廁：大致上還可以老舊但是環境跟設備上跟206比好上太多了<br>食物：四菜一湯，品項普通偏清淡</p>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
-<p>雖然滯留在那但是還是要上課的，但只是做個表面而已</p>
-</blockquote>
-<p>5:30 起床折棉<br>6:20 集合吃飯<br>7:40 集合<br>操課(基本教練)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:50 起床準備集合<br>操課(看宣教影片)<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯<br>21:30 就寢</p>
-<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><h5 id="第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食"><a href="#第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食" class="headerlink" title="第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食"></a>第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食</h5><blockquote>
-<p>至少檯面上的做好檯面下才有彈性想要什麼樣的生活自己爭取都是互相的，這句話在接下來的兩個月都用的到</p>
-</blockquote>
-<h5 id="假如滿分五分關西分數是1分，那這邊我給3分"><a href="#假如滿分五分關西分數是1分，那這邊我給3分" class="headerlink" title="假如滿分五分關西分數是1分，那這邊我給3分"></a>假如滿分五分關西分數是1分，那這邊我給3分</h5>]]></content>
+    <title>Hexo GitPage初次使用</title>
+    <url>/2020/09/15/2020-09-15/</url>
+    <content><![CDATA[<p > 前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>
+<p > 而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</p>
+
+<h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
+<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
       <tags>
-        <tag>2023當兵</tag>
+        <tag>blog</tag>
+        <tag>GitPage</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>2023當兵心得-東引篇</title>
-    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/</url>
-    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
-<h3 id="第二階段-東引地須指揮部步兵連"><a href="#第二階段-東引地須指揮部步兵連" class="headerlink" title="第二階段-東引地須指揮部步兵連"></a>第二階段-東引地須指揮部步兵連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：(核心營區)分123寢，一寢比較大人數會比較多，166梯38人1寢就睡了20幾個士官寢也在一寢還有一個大的雜物區，二寢四張四人上下舖床，三寢沒睡到原本是曬衣間後來便隔離間<br>浴廁：(核心營區)好到不能再好了，除了水壓人多會太低洗澡不好洗大多沒甚麼好挑剔的<br>食物：慘到不能再慘一餐二至四道菜，不好吃就算了還分量稀少沒得加菜</p>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
-<p>物資匱乏(到4月初前連網路都沒有)</p>
-</blockquote>
-<h5 id="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"><a href="#東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等" class="headerlink" title="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"></a>東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等</h5><h5 id="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"><a href="#單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛" class="headerlink" title="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"></a>單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛</h5><h5 id="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"><a href="#跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了" class="headerlink" title="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"></a>跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了</h5><h5 id="除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試"><a href="#除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試" class="headerlink" title="除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試"></a>除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試</h5><blockquote>
-<p>站哨要幹嘛?看海阿看天空阿，不得不說風景很好風很涼</p>
-</blockquote>
-<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><blockquote>
-<p>當兵好花錢阿</p>
-</blockquote>
-<h5 id="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"><a href="#踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡" class="headerlink" title="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"></a>踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡</h5><h5 id="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"><a href="#食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴" class="headerlink" title="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"></a>食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴</h5><blockquote>
-<p>怎麼一直在領錢啊</p>
-</blockquote>
-<h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>]]></content>
   </entry>
   <entry>
     <title>Asp.NET WebForm前端傳遞資料到C#</title>
@@ -105,20 +88,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Asp.Net UpdatePanel筆記</title>
-    <url>/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>]]></content>
+    <title>2023 關西-東引當兵心得(韋昌嶺篇)</title>
+    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
+<h3 id="第二階段過度-韋昌嶺「馬祖前送官兵轉運站」"><a href="#第二階段過度-韋昌嶺「馬祖前送官兵轉運站」" class="headerlink" title="第二階段過度-韋昌嶺「馬祖前送官兵轉運站」"></a>第二階段過度-韋昌嶺「馬祖前送官兵轉運站」</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：非常老舊，在二三樓左右兩邊都有大通鋪提供給要去東引但是沒船滯留的人睡因為通常都不會有人睡所以床上灰塵很多，沒開窗戶會悶熱並成為病毒養蠱中心<br>浴廁：大致上還可以老舊但是環境跟設備上跟206比好上太多了<br>食物：四菜一湯，品項普通偏清淡</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
+<p>雖然滯留在那但是還是要上課的，但只是做個表面而已</p>
+</blockquote>
+<p>5:30 起床折棉<br>6:20 集合吃飯<br>7:40 集合<br>操課(基本教練)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:50 起床準備集合<br>操課(看宣教影片)<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯<br>21:30 就寢</p>
+<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><h5 id="第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食"><a href="#第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食" class="headerlink" title="第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食"></a>第一天剛來的時候不太滿意，整體老舊內物櫃不夠內務不知道要怎麼搞食物比關西還要差重點是很多餐盤都發霉集合有一段路沒遮雨常常淋雨，早上還要基本教練操課看到去其他單位的弟兄已經開始迎接快樂新生活比爽度有嚴重的落差感，但是沒過多久之後也慢慢體會到這邊的優點比如班長人都很好給我們的彈性非常大整體上沒什麼壓力而且晚上可以訂外食</h5><blockquote>
+<p>至少檯面上的做好檯面下才有彈性想要什麼樣的生活自己爭取都是互相的，這句話在接下來的兩個月都用的到</p>
+</blockquote>
+<h5 id="假如滿分五分關西分數是1分，那這邊我給3分"><a href="#假如滿分五分關西分數是1分，那這邊我給3分" class="headerlink" title="假如滿分五分關西分數是1分，那這邊我給3分"></a>假如滿分五分關西分數是1分，那這邊我給3分</h5>]]></content>
       <tags>
-        <tag>ASP.Net</tag>
+        <tag>2023當兵</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>c#去除HtmlTag</title>
-    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
-    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
   </entry>
   <entry>
     <title>C#使用Post</title>
@@ -158,6 +142,38 @@
 ]]></content>
       <tags>
         <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JsonConvert.DeserializeObject()的空字串遺失字串處理</title>
+    <url>/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/</url>
+    <content><![CDATA[<h1 id="設定-JsonSerializerSettings"><a href="#設定-JsonSerializerSettings" class="headerlink" title="設定 JsonSerializerSettings"></a>設定 JsonSerializerSettings</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> settings = <span class="keyword">new</span> JsonSerializerSettings</span><br><span class="line">     &#123;</span><br><span class="line">         NullValueHandling = NullValueHandling.Ignore,</span><br><span class="line">         MissingMemberHandling = MissingMemberHandling.Ignore</span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c#去除HtmlTag</title>
+    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
+    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>Animations30 Day2</title>
+    <url>/2020/09/21/Animations30Day2/</url>
+    <content><![CDATA[<h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
+<li>Pixi.js</li>
+<li>GSAP</li>
+</ul>
+<hr>
+<h1 id="PIXI-JS"><a href="#PIXI-JS" class="headerlink" title="PIXI.JS"></a>PIXI.JS</h1><h5 id="pixi-js-是專門用來做-2D-動畫的渲染庫，速度快，體積小-有了他可以不用深入研究-webGL-而且瀏覽器相容性問題他都幫你處理好了。"><a href="#pixi-js-是專門用來做-2D-動畫的渲染庫，速度快，體積小-有了他可以不用深入研究-webGL-而且瀏覽器相容性問題他都幫你處理好了。" class="headerlink" title="pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了。"></a>pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了。</h5><h1 id="起手式"><a href="#起手式" class="headerlink" title="起手式"></a>起手式</h1><h5 id="導入-cdn"><a href="#導入-cdn" class="headerlink" title="導入 cdn"></a>導入 cdn</h5><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.2/pixi.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="然後開始"><a href="#然後開始" class="headerlink" title="然後開始"></a>然後開始</h5><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//首先我們要做的是建立一個新的PIXI容器</span></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> PIXI.Application(&#123;</span><br><span class="line">    width:window.innerWidth,</span><br><span class="line">    height:window.innerHeight,</span><br><span class="line"><span class="comment">//其他還有很多屬性</span></span><br><span class="line">    view</span><br><span class="line">    backgroundColor</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 把容器掛上去</span></span><br><span class="line">doucument.body.appendChild(app.view)</span><br><span class="line"></span><br><span class="line"><span class="comment">//建立貼圖</span></span><br><span class="line"><span class="comment">// 先導入圖片</span></span><br><span class="line"><span class="keyword">const</span> textTrue = PIXI.Texture.<span class="keyword">from</span>(<span class="string">&#x27;./asset/example.png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用圖片創建紋理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> player = <span class="keyword">new</span> PIXI.Sprite(textTrue)</span><br><span class="line"></span><br><span class="line"><span class="comment">//這時候應該你的圖片會顯示在動畫容器裡面</span></span><br><span class="line"><span class="comment">//設定一下圖片位置</span></span><br><span class="line">player.x = app.view.width / <span class="number">2</span></span><br><span class="line">player.y = app.view.height / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//簡單的旋轉動畫</span></span><br><span class="line"><span class="function">function <span class="title">animation</span> ()</span>&#123;</span><br><span class="line">  player.rotation += <span class="number">0.1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ticker是用來更新畫面，PIXI都幫你處理好底下的一些邏輯，以往都要自己寫</span></span><br><span class="line">app.ticker.<span class="keyword">add</span>(animation)</span><br><span class="line"></span><br><span class="line"><span class="comment">//這時候他應該會開始旋轉</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h5 id="今天原本是打算用-gsap-pixi-做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI-是一個很強大的動畫庫，而且很有趣"><a href="#今天原本是打算用-gsap-pixi-做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI-是一個很強大的動畫庫，而且很有趣" class="headerlink" title="今天原本是打算用 gsap + pixi 做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI 是一個很強大的動畫庫，而且很有趣"></a>今天原本是打算用 gsap + pixi 做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI 是一個很強大的動畫庫，而且很有趣</h5>]]></content>
+      <tags>
+        <tag>pixijs</tag>
       </tags>
   </entry>
   <entry>
@@ -214,51 +230,37 @@
       </tags>
   </entry>
   <entry>
-    <title>Animations30 Day2</title>
-    <url>/2020/09/21/Animations30Day2/</url>
-    <content><![CDATA[<h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
-<li>Pixi.js</li>
-<li>GSAP</li>
+    <title>React + Firebase 即時聊天系統</title>
+    <url>/2023/05/23/firebase%20IM/</url>
+    <content><![CDATA[<h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
+<li>FireBase realtime database , functions , Cloud FireStore</li>
+<li>Post man</li>
+<li>node 8 (因為免費專案只能用 node 8 更高的版本要升級帳戶才能使用 cloude function，node 8 只支援到 2021 年)</li>
+<li>express</li>
 </ul>
-<hr>
-<h1 id="PIXI-JS"><a href="#PIXI-JS" class="headerlink" title="PIXI.JS"></a>PIXI.JS</h1><h5 id="pixi-js-是專門用來做-2D-動畫的渲染庫，速度快，體積小-有了他可以不用深入研究-webGL-而且瀏覽器相容性問題他都幫你處理好了。"><a href="#pixi-js-是專門用來做-2D-動畫的渲染庫，速度快，體積小-有了他可以不用深入研究-webGL-而且瀏覽器相容性問題他都幫你處理好了。" class="headerlink" title="pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了。"></a>pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了。</h5><h1 id="起手式"><a href="#起手式" class="headerlink" title="起手式"></a>起手式</h1><h5 id="導入-cdn"><a href="#導入-cdn" class="headerlink" title="導入 cdn"></a>導入 cdn</h5><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.0.2/pixi.min.js&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
+<li>結構不能太深 ，平面化</li>
+<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個 id 來撈你要的資料 比如 uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
+</ul>
+<h2 id="Storage-的資料設計差不多是這樣"><a href="#Storage-的資料設計差不多是這樣" class="headerlink" title="Storage 的資料設計差不多是這樣"></a>Storage 的資料設計差不多是這樣</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;userHandle&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">    ...</span><br><span class="line">    userID<span class="punctuation">:</span> <span class="string">&quot;uid&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="attr">&quot;roomID&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">     ...</span><br><span class="line">     member<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">:</span>uid <span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">:</span>uid<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h5 id="然後開始"><a href="#然後開始" class="headerlink" title="然後開始"></a>然後開始</h5><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//首先我們要做的是建立一個新的PIXI容器</span></span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> PIXI.Application(&#123;</span><br><span class="line">    width:window.innerWidth,</span><br><span class="line">    height:window.innerHeight,</span><br><span class="line"><span class="comment">//其他還有很多屬性</span></span><br><span class="line">    view</span><br><span class="line">    backgroundColor</span><br><span class="line">    ...</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 把容器掛上去</span></span><br><span class="line">doucument.body.appendChild(app.view)</span><br><span class="line"></span><br><span class="line"><span class="comment">//建立貼圖</span></span><br><span class="line"><span class="comment">// 先導入圖片</span></span><br><span class="line"><span class="keyword">const</span> textTrue = PIXI.Texture.<span class="keyword">from</span>(<span class="string">&#x27;./asset/example.png&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用圖片創建紋理</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> player = <span class="keyword">new</span> PIXI.Sprite(textTrue)</span><br><span class="line"></span><br><span class="line"><span class="comment">//這時候應該你的圖片會顯示在動畫容器裡面</span></span><br><span class="line"><span class="comment">//設定一下圖片位置</span></span><br><span class="line">player.x = app.view.width / <span class="number">2</span></span><br><span class="line">player.y = app.view.height / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//簡單的旋轉動畫</span></span><br><span class="line"><span class="function">function <span class="title">animation</span> ()</span>&#123;</span><br><span class="line">  player.rotation += <span class="number">0.1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ticker是用來更新畫面，PIXI都幫你處理好底下的一些邏輯，以往都要自己寫</span></span><br><span class="line">app.ticker.<span class="keyword">add</span>(animation)</span><br><span class="line"></span><br><span class="line"><span class="comment">//這時候他應該會開始旋轉</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h5 id="今天原本是打算用-gsap-pixi-做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI-是一個很強大的動畫庫，而且很有趣"><a href="#今天原本是打算用-gsap-pixi-做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI-是一個很強大的動畫庫，而且很有趣" class="headerlink" title="今天原本是打算用 gsap + pixi 做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI 是一個很強大的動畫庫，而且很有趣"></a>今天原本是打算用 gsap + pixi 做一個滾動的故事動畫可是要研究的東西比我想像中的還要多，PIXI 是一個很強大的動畫庫，而且很有趣</h5>]]></content>
+<h6 id="在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等"><a href="#在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等" class="headerlink" title="在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等"></a>在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等</h6><h6 id="roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，"><a href="#roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，" class="headerlink" title="roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，"></a>roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，</h6><h6 id="後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去"><a href="#後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去" class="headerlink" title="後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去"></a>後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去</h6><p>……後續慢慢補上先完成 web 板好了</p>
+]]></content>
+      <categories>
+        <category>React</category>
+      </categories>
       <tags>
-        <tag>pixijs</tag>
+        <tag>react</tag>
+        <tag>firebase</tag>
       </tags>
   </entry>
   <entry>
     <title>測量程式碼區塊執行時間</title>
     <url>/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</url>
-    <content><![CDATA[<h1 id="使用System-Diagnostics"><a href="#使用System-Diagnostics" class="headerlink" title="使用System.Diagnostics"></a>使用System.Diagnostics</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">Stopwatch stopWatch = Stopwatch.StartNew(); <span class="comment">//建立計時器</span></span><br><span class="line">  <span class="comment">/*要測試的區塊放這*/</span></span><br><span class="line">stopWatch.Stop();<span class="comment">//暫停計時</span></span><br><span class="line">Trace.WriteLine(<span class="string">&quot;使用時間: &quot;</span>+ stopWatch.ElapsedMilliseconds); <span class="comment">//顯示時間</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="使用-System-Diagnostics"><a href="#使用-System-Diagnostics" class="headerlink" title="使用 System.Diagnostics"></a>使用 System.Diagnostics</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line">Stopwatch stopWatch = Stopwatch.StartNew();</span><br><span class="line"><span class="comment">/*要測試的區塊放這*/</span></span><br><span class="line">stopWatch.Stop();</span><br><span class="line">Trace.WriteLine(<span class="string">&quot;使用時間: &quot;</span>+ stopWatch.ElapsedMilliseconds);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Animation30 Day1</title>
-    <url>/2020/09/18/css-30-Day1/</url>
-    <content><![CDATA[<h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
-<li>TweenMaxTweenMax</li>
-<li>TimelineMax</li>
-<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
-<li>GSAP</li>
-</ul>
-<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>]]></content>
-      <tags>
-        <tag>css</tag>
-        <tag>animation</tag>
       </tags>
   </entry>
   <entry>
@@ -284,28 +286,35 @@
       </tags>
   </entry>
   <entry>
-    <title>React + Firebase 即時聊天系統</title>
-    <url>/2023/05/23/firebase%20IM/</url>
-    <content><![CDATA[<h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
-<li>FireBase realtime database , functions , Cloud FireStore</li>
-<li>Post man</li>
-<li>node 8 (因為免費專案只能用 node 8 更高的版本要升級帳戶才能使用 cloude function，node 8 只支援到 2021 年)</li>
-<li>express</li>
+    <title>Animation30 Day1</title>
+    <url>/2020/09/18/css-30-Day1/</url>
+    <content><![CDATA[<h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
+<li>TweenMaxTweenMax</li>
+<li>TimelineMax</li>
+<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
+<li>GSAP</li>
 </ul>
-<h6 id="一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
-<li>結構不能太深 ，平面化</li>
-<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個 id 來撈你要的資料 比如 uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
-</ul>
-<h2 id="Storage-的資料設計差不多是這樣"><a href="#Storage-的資料設計差不多是這樣" class="headerlink" title="Storage 的資料設計差不多是這樣"></a>Storage 的資料設計差不多是這樣</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;userHandle&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">    ...</span><br><span class="line">    userID<span class="punctuation">:</span> <span class="string">&quot;uid&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="attr">&quot;roomID&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">     ...</span><br><span class="line">     member<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">:</span>uid <span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">:</span>uid<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<h6 id="在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等"><a href="#在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等" class="headerlink" title="在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等"></a>在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等</h6><h6 id="roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，"><a href="#roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，" class="headerlink" title="roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，"></a>roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，</h6><h6 id="後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去"><a href="#後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去" class="headerlink" title="後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去"></a>後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去</h6><p>……後續慢慢補上先完成 web 板好了</p>
-]]></content>
-      <categories>
-        <category>React</category>
-      </categories>
+<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>]]></content>
       <tags>
-        <tag>react</tag>
-        <tag>firebase</tag>
+        <tag>css</tag>
+        <tag>animation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Asp.Net UpdatePanel筆記</title>
+    <url>/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>]]></content>
+      <tags>
+        <tag>ASP.Net</tag>
       </tags>
   </entry>
 </search>
