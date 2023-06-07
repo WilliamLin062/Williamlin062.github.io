@@ -65,6 +65,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SQL優化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/" class="article-date">
+  <time datetime="2023-06-06T09:50:53.000Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="用UNION-ALL取代大量OR"><a href="#用UNION-ALL取代大量OR" class="headerlink" title="用UNION ALL取代大量OR"></a>用UNION ALL取代大量OR</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">            <span class="comment">--未修改前 執行時間為 12秒 CPU使用率100%</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br><span class="line">  </span><br><span class="line">            <span class="comment">--建立 PreMember暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> pmcu.<span class="operator">*</span> , cdcu.DEPT_Boss</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMember</span><br><span class="line">            <span class="keyword">FROM</span> (</span><br><span class="line">            (<span class="keyword">SELECT</span> cu.EP_DeptSno , cu.EP_CName , pm.<span class="operator">*</span></span><br><span class="line">             <span class="keyword">FROM</span> CM_Pre_Member pm <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> PM.EP_Id <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> pmcu <span class="keyword">JOIN</span></span><br><span class="line">            (<span class="keyword">SELECT</span> DEPT_Sno , DEPT_Boss <span class="keyword">FROM</span> CP_Dept cd ) <span class="keyword">AS</span> cdcu <span class="keyword">ON</span> pmcu.EP_DeptSno <span class="operator">=</span> cdcu.DEPT_Sno</span><br><span class="line">            )</span><br><span class="line">  </span><br><span class="line">            <span class="comment">--使用於Blacklist用</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line">  </span><br><span class="line">            <span class="comment">--使用於Select準會員</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> , cu.EP_Id <span class="keyword">AS</span> BossID , cu.EP_CName <span class="keyword">AS</span> BossName <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">            <span class="comment">--建立 Blacklist暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> AutoNo , CName ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel1 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel1 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel1,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel1 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel2 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel2 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel2,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel2 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel3 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel3 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel3,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel3 </span><br><span class="line">            <span class="keyword">INTO</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> ESIC_ERP.dbo.Blacklist <span class="keyword">WHERE</span> Tel1 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel2 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel3 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">-- 這段花費88%時間處理，一半時間在處理or巢狀迴圈另一半在處理 插入暫存表#TempPreBlacklist</span></span><br><span class="line">            <span class="comment">--建立BlackList內層 用於區分是否為黑名單成員</span></span><br><span class="line">            <span class="comment">--SELECT TB.AutoNo , TB.CName , TPMJ.PM_Sno , TPMJ.EP_CName </span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">            <span class="keyword">ON</span> TPMJ.EP_CName <span class="operator">=</span> TB.CName <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel3</span><br><span class="line">  </span><br><span class="line">            <span class="comment">--計算數量</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> DataCount</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm </span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line">  </span><br><span class="line">            <span class="comment">--條列出每個內容</span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMLJ.<span class="operator">*</span> , bk_list , <span class="keyword">CASE</span> <span class="keyword">WHEN</span> TPMLJ.BossID <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> TPMLJ.BossID <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="string">&#x27;(無主管資料)&#x27;</span> <span class="keyword">ELSE</span> TPMLJ.BossName <span class="keyword">END</span> bkcname</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm </span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line">  </span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--使用union all 取代每個or後 巢狀迴圈消失 執行時間縮短為4秒</span></span><br><span class="line">       <span class="comment">--再來能明顯增加速度優化方向為不使用暫存表</span></span><br><span class="line">        <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">        <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">        <span class="keyword">ON</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel1 </span><br><span class="line"> <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line"> <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">        <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">        <span class="keyword">ON</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel1 </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/06/06/SQL%E5%84%AA%E5%8C%96/" data-id="clil2usad000pjoup3xo850xv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JsonConvert-DeserializeObject-空字串遺失字串處理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/" class="article-date">
@@ -92,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/" data-id="clijwn4bl000efwupb3nteeyz" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/" data-id="clil2usab000ljoup7z8h6rmg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
@@ -131,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/" data-id="clijwn4br000ofwupetgg5ke1" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/" data-id="clil2usan001jjoupdwa582ji" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
@@ -170,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/" data-id="clijwn4bm000gfwupffs14jbr" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/" data-id="clil2usac000njoup562xdric" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" data-id="clijwn4c9001hfwupb9pfcecf" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" data-id="clil2usa8000gjoupbteq82v4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li></ul>
@@ -259,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" data-id="clijwn4bh0008fwup8yhneu57" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" data-id="clil2usa7000djoup31d0fus7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li></ul>
@@ -329,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" data-id="clijwn4bk000bfwup8t3i9e9s" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" data-id="clil2usa9000ijoupg2zaaxmn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
@@ -384,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/05/23/firebase%20IM/" data-id="clijwn4bq000mfwup51qcatpm" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/05/23/firebase%20IM/" data-id="clil2usae000tjoup75xu1mua" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
@@ -436,7 +475,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" data-id="clijwn4b90001fwup4byzc1bk" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" data-id="clil2usa10005joup7bvk2ii2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -481,61 +520,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/" data-id="clijwn4bj000afwupcsc04kbb" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2023當兵心得-關西篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/" class="article-date">
-  <time datetime="2023-04-22T08:14:37.000Z" itemprop="datePublished">2023-04-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/">2023 關西-東引當兵心得(關西篇)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><hr>
-<h3 id="第一階段-關西206旅2營2連"><a href="#第一階段-關西206旅2營2連" class="headerlink" title="第一階段 關西206旅2營2連"></a>第一階段 關西206旅2營2連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：72人大通鋪4人一床上下鋪環境一般<br>浴廁：廁所很爛小便斗全壞，蹲式也有幾間故障72人用四間蹲式大小便，二樓浴室尚可三樓有間只有熱水<br>食物：五菜一湯品項在比較各單位之後算好了，但是時常過油過鹹，蛋永遠有焦味</p>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
-<p>第一二周都是在填資料還有聽招募比較多，以下是正式開始上課的日常</p>
-</blockquote>
-<p>5:30 起床折棉被換衣服廁所排隊<br>6:20 集合取裝&#x2F;吃飯<br>7:40 早點名&#x2F;集合<br>操課(基本教練&#x2F;單戰&#x2F;射擊預習&#x2F;刺槍術&#x2F;手投&#x2F;打靶)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:20 起床準備集合<br>操課<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯</p>
-<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><p>沒什麼彈性，假如你不曾聽過快樂釐頭山、金六結快樂營、隔壁五營，然後抱著一顆無慾無求心跟做好會遇到最壞狀況的心理建設，那恭喜你在這邊過一個月沒問題，我在進來前問過剛從這退的同學這裡生活怎麼樣，他是這樣描述</p>
-<blockquote>
-<p>前面精神上的痛苦後面肉體上的痛苦</p>
-</blockquote>
-<h5 id="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"><a href="#進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣" class="headerlink" title="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"></a>進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣</h5><h5 id="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"><a href="#在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話" class="headerlink" title="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"></a>在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話</h5><blockquote>
-<p>沒有慾望就沒有痛苦、欲望會帶來痛苦如果洗澡會讓你痛苦就別洗了吧</p>
-</blockquote>
-<h4 id="準備物品"><a href="#準備物品" class="headerlink" title="準備物品"></a>準備物品</h4><h5 id="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"><a href="#濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀" class="headerlink" title="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"></a>濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀</h5><blockquote>
-<p>入營後會給營站購買清單記得都買齊<br>建議買防水袋四個，裝錢包鞋油小東西很好用<br>不用帶書了沒時間看，帶了也會被收走書籍屬於違禁品<br>別帶腦子</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/" data-id="clijwn4bc0003fwup6o1wgcul" class="article-share-link">Share</a>
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/" data-id="clil2usa50009joupbwpx4tw3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li></ul>
@@ -604,6 +589,10 @@
       <ul>
         
           <li>
+            <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+          </li>
+        
+          <li>
             <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">JsonConvert.DeserializeObject()的空字串遺失字串處理</a>
           </li>
         
@@ -617,10 +606,6 @@
         
           <li>
             <a href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/">Asp.Net UpdatePanel筆記</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/">Asp.NET WebForm前端傳遞資料到C#</a>
           </li>
         
       </ul>
