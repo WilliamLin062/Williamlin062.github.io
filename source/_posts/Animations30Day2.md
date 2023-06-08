@@ -1,11 +1,10 @@
 ---
 title: Animations30 Day2
 date: 2020-09-21 15:42:47
-cover: https://source.unsplash.com/random/800x500
+cover: https://source.unsplash.com/random/500×500/?code
 tags:
   - pixijs
 ---
-
 ## 用到了
 
 - Pixi.js
@@ -15,7 +14,7 @@ tags:
 
 # PIXI.JS
 
-##### pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了。
+##### pixi.js 是專門用來做 2D 動畫的渲染庫，速度快，體積小 有了他可以不用深入研究 webGL 而且瀏覽器相容性問題他都幫你處理好了
 
 # 起手式
 

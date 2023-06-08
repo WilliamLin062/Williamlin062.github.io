@@ -1,12 +1,10 @@
 ---
 title: Animations30 Day3
 date: 2020-09-23 10:10:31
-cover: https://source.unsplash.com/random/800x500
+cover: https://source.unsplash.com/random/500×500/?code
 tags:
   - pixijs
-
 ---
-
 ## 整理一下目前我對pixi的了解
 
 * container   (放圖形的容器可以有很多個，可以用來分組)

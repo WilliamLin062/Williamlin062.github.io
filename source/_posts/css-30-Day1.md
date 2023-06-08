@@ -1,13 +1,11 @@
 ---
 title: Animation30 Day1
 date: 2020-09-18 14:12:42
-cover: https://source.unsplash.com/random
+cover: https://source.unsplash.com/random/500×500/?code
 tags:
   - css
   - animation
-
 ---
-
 ## 用到了
 
 - TweenMaxTweenMax
@@ -57,8 +55,6 @@ tl.form('.box',{x:200})
 ```
 
 ---
-
-
 
 # 總結
 

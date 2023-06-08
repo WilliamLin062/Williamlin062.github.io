@@ -4,10 +4,12 @@ deploy:
   repo: https://github.com/WilliamLin062/Williamlin062.github.io
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
-theme: Claudia
-title: william's space
+theme: butterfly
+title: William的個人空間
 language: zh-TW
+author: WilliamLin
 keywords: React React-Native Unity Game 東引當兵 東引 當兵 2023
-
+highlight:
+  enable: true
 #URL
 url: https://williamlin062.github.io/

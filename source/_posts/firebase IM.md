@@ -5,10 +5,8 @@ categories:
 tags:
   - react
   - firebase
-cover: https://source.unsplash.com/random/1000x1000
-
+cover: https://source.unsplash.com/random/500×500/?code
 ---
-
 ## 使用的有
 
 - FireBase realtime database , functions , Cloud FireStore

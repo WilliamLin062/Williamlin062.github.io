@@ -4,10 +4,8 @@ date: 2020-09-24 11:26:17
 tags:
   - javaScript lib
   - tool
-cover: https://source.unsplash.com/random/900x800
-
+cover: https://source.unsplash.com/random/500×500/?code
 ---
-
 # 前端框架
 
 - [React.js]()
@@ -63,5 +61,4 @@ cover: https://source.unsplash.com/random/900x800
 
 # 測試
 
-* Nightwatch.js
-*
+- Nightwatch.js
