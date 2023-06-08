@@ -1,8 +1,9 @@
 ---
 title: Asp.NET WebForm前端傳遞資料到C#
-date: 2023-05-23 14:43:01 
+date: 2023-05-23 14:43:01
 tags: Asp.NET
 ---
+
 # 使用 HiddenField
 
 ##### 這是 ASP 的 HiddenField 控件
@@ -13,7 +14,7 @@ tags: Asp.NET
 - runat:標示為伺服器端控件讓伺服器端可以直接訪問
 - Value:可以填一些字串資料在裡面，hiddenField 會用 Post 方法回傳至伺服器端
 
-```echarts
+```
 <asp:HiddenField ID="HiddenData" runat="server" Value="" />
 ```
 
@@ -32,3 +33,22 @@ hiddenField.value ="我很隱密"
 ##### 缺點
 
 ###### 不能放一些敏感的資訊比如 Token 之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖 CallAPI
+
+# 使用 POST
+
+###### 每次有呼叫頁面都會觸發 WebForm 的 Page_load 事件，這時可以在這裡捕捉 Request.HttpMethod 如果是 POST 在做處裡也可以處裡其他事件
+
+```csharp
+            using (var reader = new System.IO.StreamReader(Request.InputStream) )
+            {
+                string body = reader.ReadToEnd();
+                if (Request.HttpMethod=="POST")
+                {
+                    //HandleFunc here
+                }
+            }
+```
+
+# URL 參數
+
+##### PostBack 時在 Url 裡面塞參數帶回去在做處裡
