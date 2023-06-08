@@ -2,11 +2,10 @@
 title: about
 
 date: 2020-09-15 09:56:49
-
 ---
 # 關於我
 
-<img src="https://source.unsplash.com/random/800x300" alt="img" style="width:100%;height:250px;"  >
+<img src="https://source.unsplash.com/random/500×900/?d"  >
 
 ## 學經歷
 
