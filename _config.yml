@@ -5,7 +5,7 @@ deploy:
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
 theme: landscape
-title: william's space
+title: William的個人空間
 language: zh-TW
 keywords: React React-Native Unity Game 東引當兵 東引 當兵 2023
 
