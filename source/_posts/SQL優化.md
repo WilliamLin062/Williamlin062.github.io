@@ -3,21 +3,20 @@ title: SQL優化
 date: 2023-06-06 17:50:53
 tags: TSQL SQL SqlServer
 ---
-# SQL Server事件監視器
+
+# SQL Server 事件監視器
 
 ### 開啟位置 [工具]->SQL Server Profiler
 
-#### SQL Server Profiler是一個很有用的工具，可以看SQL在執行時實際在發生哪些事情
+#### SQL Server Profiler 是一個很有用的工具，可以看 SQL 在執行時實際在發生哪些事情
 
-#### 還有查看TSQL在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能
-
+#### 還有查看 TSQL 在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能
 
 # SQL Server 執行計畫 用戶端統計資料
 
 ### 開啟位置 [查詢] -> 包括用戶端統計資料 / 包括實際執行計畫
 
-#### 可以看到SQL執行每段查詢時的效能還有用戶端使用時間，可以幫助優化
-
+#### 可以看到 SQL 執行每段查詢時的效能還有用戶端使用時間
 
 # 用 UNION ALL 取代大量 OR
 
