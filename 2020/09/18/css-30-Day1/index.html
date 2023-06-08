@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Animation30 Day1 | William的個人空間</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="用到了 TweenMaxTweenMax TimelineMax ScrollMagicScrollMagic (有更好的被取代了) GSAP  動機最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計GreenSock這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Animation30 Day1">
+<meta property="og:url" content="https://williamlin062.github.io/2020/09/18/css-30-Day1/index.html">
+<meta property="og:site_name" content="William的個人空間">
+<meta property="og:description" content="用到了 TweenMaxTweenMax TimelineMax ScrollMagicScrollMagic (有更好的被取代了) GSAP  動機最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計GreenSock這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scr">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-09-18T06:12:42.000Z">
+<meta property="article:modified_time" content="2023-06-08T09:26:46.432Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="animation">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="William的個人空間" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">William的個人空間</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://williamlin062.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-30-Day1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/18/css-30-Day1/" class="article-date">
+  <time datetime="2020-09-18T06:12:42.000Z" itemprop="datePublished">2020-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Animation30 Day1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="用到了"><a href="#用到了" class="headerlink" title="用到了"></a>用到了</h2><ul>
+<li>TweenMaxTweenMax</li>
+<li>TimelineMax</li>
+<li><del>ScrollMagicScrollMagic</del> (有更好的被取代了)</li>
+<li>GSAP</li>
+</ul>
+<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><h6 id="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"><a href="#最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來-外觀能看就好-，不過還是該學一下怎麼弄複雜的動畫還有視覺設計" class="headerlink" title="最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計"></a>最近突然覺得自己炫泡動畫功力真的該加強一下了，之前都不怎麼在意外觀只想要把功能弄出來 外觀能看就好 ，不過還是該學一下怎麼弄複雜的動畫還有視覺設計</h6><h1 id="GreenSock"><a href="#GreenSock" class="headerlink" title="GreenSock"></a>GreenSock</h1><h6 id="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推"><a href="#這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有-Scroll-Trigger-，這是最近出的功能之前都還要搭配另一個叫-Scroll-Magic-的套件，總之非常推" class="headerlink" title="這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推"></a>這個真的非常好用，用了這個不用再管關鍵貞還有時間線可以專心在設計動畫，而且還有 Scroll Trigger ，這是最近出的功能之前都還要搭配另一個叫 Scroll Magic 的套件，總之非常推</h6><h4 id="只需要使用-cdn-體驗一下就知道有多簡單"><a href="#只需要使用-cdn-體驗一下就知道有多簡單" class="headerlink" title="只需要使用 cdn 體驗一下就知道有多簡單"></a>只需要使用 cdn 體驗一下就知道有多簡單</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h4><h6 id="官網提供最簡單的範例"><a href="#官網提供最簡單的範例" class="headerlink" title="官網提供最簡單的範例"></a>官網提供最簡單的範例</h6><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//當box進入到畫面的時候往右邊滑</span></span><br><span class="line"></span><br><span class="line">gsap.to(<span class="string">&#x27;#box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<h6 id="比較進階-可以自己設定很多屬性"><a href="#比較進階-可以自己設定很多屬性" class="headerlink" title="比較進階 可以自己設定很多屬性"></a>比較進階 可以自己設定很多屬性</h6><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 設定觸發元件還有觸發位置，其他還提供非常多屬性可以設定 功能很多</span></span><br><span class="line"><span class="keyword">let</span> tl = gsap.timeline(&#123;scrollTrigger:&#123;</span><br><span class="line">trigger:<span class="string">&quot;#div&quot;</span>,</span><br><span class="line">start:<span class="string">&#x27;top top&#x27;</span>,</span><br><span class="line">scrub:<span class="number">1</span></span><br><span class="line"></span><br><span class="line">&#125;&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//從右側滑回來</span></span><br><span class="line">tl.form(<span class="string">&#x27;.box&#x27;</span>,&#123;x:<span class="number">200</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><h6 id="一下就能上手感覺還有很多花樣可以研究，明天繼續"><a href="#一下就能上手感覺還有很多花樣可以研究，明天繼續" class="headerlink" title="一下就能上手感覺還有很多花樣可以研究，明天繼續!"></a>一下就能上手感覺還有很多花樣可以研究，明天繼續!</h6>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2020/09/18/css-30-Day1/" data-id="climxtl2j000t84updlzn65ft" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/21/Animations30Day2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Animations30 Day2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/15/2020-09-15/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo GitPage初次使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitPage/" rel="tag">GitPage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TSQL-SQL-SqlServer/" rel="tag">TSQL SQL SqlServer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2023%E7%95%B6%E5%85%B5/" style="font-size: 15px;">2023當兵</a> <a href="/tags/ASP-Net/" style="font-size: 10px;">ASP.Net</a> <a href="/tags/Asp-NET/" style="font-size: 10px;">Asp.NET</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/GitPage/" style="font-size: 10px;">GitPage</a> <a href="/tags/TSQL-SQL-SqlServer/" style="font-size: 10px;">TSQL SQL SqlServer</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/firebase/" style="font-size: 10px;">firebase</a> <a href="/tags/javaScript-lib/" style="font-size: 10px;">javaScript lib</a> <a href="/tags/pixijs/" style="font-size: 15px;">pixijs</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/08/firebase%20IM/">React + Firebase 即時聊天系統</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/">AspMvc路由至靜態Html</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">JsonConvert.DeserializeObject()的空字串遺失字串處理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/">測量程式碼區塊執行時間</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

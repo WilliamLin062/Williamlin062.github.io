@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>William的個人空間</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="William的個人空間">
+<meta property="og:url" content="https://williamlin062.github.io/index.html">
+<meta property="og:site_name" content="William的個人空間">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="React React-Native Unity Game 東引當兵 東引 當兵 2023">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="William的個人空間" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">William的個人空間</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://williamlin062.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-firebase IM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/06/08/firebase%20IM/" class="article-date">
+  <time datetime="2023-06-08T09:26:46.432Z" itemprop="datePublished">2023-06-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/React/">React</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/08/firebase%20IM/">React + Firebase 即時聊天系統</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用的有"><a href="#使用的有" class="headerlink" title="使用的有"></a>使用的有</h2><ul>
+<li>FireBase realtime database , functions , Cloud FireStore</li>
+<li>Post man</li>
+<li>node 8 (因為免費專案只能用 node 8 更高的版本要升級帳戶才能使用 cloude function，node 8 只支援到 2021 年)</li>
+<li>express</li>
+</ul>
+<h6 id="一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，"><a href="#一開始是用-react-native-做因為這原本是某個案子的-demo-有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講-firebase-的部分就好，" class="headerlink" title="一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，"></a>一開始是用 react native 做因為這原本是某個案子的 demo 有簽保密協議只好重寫成網頁版，網頁版正在慢慢補上所以先講 firebase 的部分就好，</h6><h6 id="firebase-在設計資料結構的時候要注意"><a href="#firebase-在設計資料結構的時候要注意" class="headerlink" title="firebase 在設計資料結構的時候要注意"></a>firebase 在設計資料結構的時候要注意</h6><ul>
+<li>結構不能太深 ，平面化</li>
+<li>鍵值沒指定的話都是自動產生的亂數 document id，你要自己在文件內搞一個 id 來撈你要的資料 比如 uid，在建立使用者的時候會建立的一個獨一無二字串來把各個集合內的資料串起來</li>
+</ul>
+<h2 id="Storage-的資料設計差不多是這樣"><a href="#Storage-的資料設計差不多是這樣" class="headerlink" title="Storage 的資料設計差不多是這樣"></a>Storage 的資料設計差不多是這樣</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;userHandle&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">    ...</span><br><span class="line">    userID<span class="punctuation">:</span> <span class="string">&quot;uid&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="attr">&quot;roomID&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">     ...</span><br><span class="line">     member<span class="punctuation">:</span><span class="punctuation">[</span><span class="number">0</span><span class="punctuation">:</span>uid <span class="punctuation">,</span> <span class="number">1</span><span class="punctuation">:</span>uid<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h6 id="在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等"><a href="#在建立使用者之後會在-user-collection-裡面建立-user-資料，裡面會儲存使用者的資訊比如大頭貼，email-等等" class="headerlink" title="在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等"></a>在建立使用者之後會在 user collection 裡面建立 user 資料，裡面會儲存使用者的資訊比如大頭貼，email 等等</h6><h6 id="roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，"><a href="#roomID-是建立聊天室之後回傳的-doc-ID，然後-room-裡面的-member-陣列記錄聊天室內人的-uid，" class="headerlink" title="roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，"></a>roomID 是建立聊天室之後回傳的 doc ID，然後 room 裡面的 member 陣列記錄聊天室內人的 uid，</h6><h6 id="後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去"><a href="#後端-api-只需要有-uid-就可以撈出這些資料，整理一下丟回去" class="headerlink" title="後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去"></a>後端 api 只需要有 uid 就可以撈出這些資料，整理一下丟回去</h6><p>……後續慢慢補上先完成 web 板好了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/06/08/firebase%20IM/" data-id="climxtl2k000v84up6mdm21pw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/" rel="tag">react</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-AspMvc路由至靜態Html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/" class="article-date">
+  <time datetime="2023-06-08T08:43:39.000Z" itemprop="datePublished">2023-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/">AspMvc路由至靜態Html</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ActionResult <span class="title">MyHtml</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">&#123;</span></span></span><br><span class="line"><span class="params"><span class="function">     <span class="keyword">var</span> result = <span class="keyword">new</span> FilePathResult(<span class="string">$&quot;~/Views/<span class="subst">&#123;htmlPageName&#125;</span>.html&quot;</span>, <span class="string">&quot;text/html&quot;</span></span>)</span>;</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/" data-id="climxtl2a000c84up1qyy3s2n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SQL優化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/" class="article-date">
+  <time datetime="2023-06-06T09:50:53.000Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SQL-Server-事件監視器"><a href="#SQL-Server-事件監視器" class="headerlink" title="SQL Server 事件監視器"></a>SQL Server 事件監視器</h1><h3 id="開啟位置-工具-gt-SQL-Server-Profiler"><a href="#開啟位置-工具-gt-SQL-Server-Profiler" class="headerlink" title="開啟位置 [工具]-&gt;SQL Server Profiler"></a>開啟位置 [工具]-&gt;SQL Server Profiler</h3><h4 id="SQL-Server-Profiler-是一個很有用的工具，可以看-SQL-在執行時實際在發生哪些事情"><a href="#SQL-Server-Profiler-是一個很有用的工具，可以看-SQL-在執行時實際在發生哪些事情" class="headerlink" title="SQL Server Profiler 是一個很有用的工具，可以看 SQL 在執行時實際在發生哪些事情"></a>SQL Server Profiler 是一個很有用的工具，可以看 SQL 在執行時實際在發生哪些事情</h4><h4 id="還有查看-TSQL-在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能"><a href="#還有查看-TSQL-在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能" class="headerlink" title="還有查看 TSQL 在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能"></a>還有查看 TSQL 在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能</h4><h1 id="SQL-Server-執行計畫-用戶端統計資料"><a href="#SQL-Server-執行計畫-用戶端統計資料" class="headerlink" title="SQL Server 執行計畫 用戶端統計資料"></a>SQL Server 執行計畫 用戶端統計資料</h1><h3 id="開啟位置-查詢-gt-包括用戶端統計資料-x2F-包括實際執行計畫"><a href="#開啟位置-查詢-gt-包括用戶端統計資料-x2F-包括實際執行計畫" class="headerlink" title="開啟位置 [查詢] -&gt; 包括用戶端統計資料 &#x2F; 包括實際執行計畫"></a>開啟位置 [查詢] -&gt; 包括用戶端統計資料 &#x2F; 包括實際執行計畫</h3><h4 id="可以看到-SQL-執行每段查詢時的效能還有用戶端使用時間"><a href="#可以看到-SQL-執行每段查詢時的效能還有用戶端使用時間" class="headerlink" title="可以看到 SQL 執行每段查詢時的效能還有用戶端使用時間"></a>可以看到 SQL 執行每段查詢時的效能還有用戶端使用時間</h4><h1 id="用-UNION-ALL-取代大量-OR"><a href="#用-UNION-ALL-取代大量-OR" class="headerlink" title="用 UNION ALL 取代大量 OR"></a>用 UNION ALL 取代大量 OR</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">            <span class="comment">--未修改前 執行時間為 12秒 CPU使用率100%</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br><span class="line"></span><br><span class="line">            <span class="comment">--建立 PreMember暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> pmcu.<span class="operator">*</span> , cdcu.DEPT_Boss</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMember</span><br><span class="line">            <span class="keyword">FROM</span> (</span><br><span class="line">            (<span class="keyword">SELECT</span> cu.EP_DeptSno , cu.EP_CName , pm.<span class="operator">*</span></span><br><span class="line">             <span class="keyword">FROM</span> CM_Pre_Member pm <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> PM.EP_Id <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> pmcu <span class="keyword">JOIN</span></span><br><span class="line">            (<span class="keyword">SELECT</span> DEPT_Sno , DEPT_Boss <span class="keyword">FROM</span> CP_Dept cd ) <span class="keyword">AS</span> cdcu <span class="keyword">ON</span> pmcu.EP_DeptSno <span class="operator">=</span> cdcu.DEPT_Sno</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">            <span class="comment">--使用於Blacklist用</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line"></span><br><span class="line">            <span class="comment">--使用於Select準會員</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> , cu.EP_Id <span class="keyword">AS</span> BossID , cu.EP_CName <span class="keyword">AS</span> BossName <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">--建立 Blacklist暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> AutoNo , CName ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel1 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel1 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel1,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel1 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel2 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel2 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel2,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel2 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel3 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel3 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel3,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel3</span><br><span class="line">            <span class="keyword">INTO</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> ESIC_ERP.dbo.Blacklist <span class="keyword">WHERE</span> Tel1 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel2 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel3 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 這段花費88%時間處理，一半時間在處理or巢狀迴圈另一半在處理 插入暫存表#TempPreBlacklist</span></span><br><span class="line">            <span class="comment">--建立BlackList內層 用於區分是否為黑名單成員</span></span><br><span class="line">            <span class="comment">--SELECT TB.AutoNo , TB.CName , TPMJ.PM_Sno , TPMJ.EP_CName</span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">            <span class="keyword">ON</span> TPMJ.EP_CName <span class="operator">=</span> TB.CName <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel3</span><br><span class="line"></span><br><span class="line">            <span class="comment">--計算數量</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> DataCount</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm</span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">--條列出每個內容</span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMLJ.<span class="operator">*</span> , bk_list , <span class="keyword">CASE</span> <span class="keyword">WHEN</span> TPMLJ.BossID <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> TPMLJ.BossID <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="string">&#x27;(無主管資料)&#x27;</span> <span class="keyword">ELSE</span> TPMLJ.BossName <span class="keyword">END</span> bkcname</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm</span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--使用union all 取代每個or後 巢狀迴圈消失 執行時間縮短為4秒</span></span><br><span class="line">       <span class="comment">--再來能明顯增加速度優化方向為不使用暫存表</span></span><br><span class="line">        <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">        <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">        <span class="keyword">ON</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel1</span><br><span class="line"> <span class="keyword">union</span> <span class="keyword">all</span></span><br><span class="line"> <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">        <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">        <span class="keyword">ON</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel1</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/06/06/SQL%E5%84%AA%E5%8C%96/" data-id="climxtl2i000p84upe0eq3t5u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TSQL-SQL-SqlServer/" rel="tag">TSQL SQL SqlServer</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JsonConvert-DeserializeObject-空字串遺失字串處理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/" class="article-date">
+  <time datetime="2023-06-06T06:31:06.000Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">JsonConvert.DeserializeObject()的空字串遺失字串處理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="設定-JsonSerializerSettings"><a href="#設定-JsonSerializerSettings" class="headerlink" title="設定 JsonSerializerSettings"></a>設定 JsonSerializerSettings</h1><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> settings = <span class="keyword">new</span> JsonSerializerSettings</span><br><span class="line">     &#123;</span><br><span class="line">         NullValueHandling = NullValueHandling.Ignore,</span><br><span class="line">         MissingMemberHandling = MissingMemberHandling.Ignore</span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/" data-id="climxtl2h000n84up9fz79x03" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-測量程式碼區塊執行時間" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/" class="article-date">
+  <time datetime="2023-05-29T09:38:06.000Z" itemprop="datePublished">2023-05-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/">測量程式碼區塊執行時間</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用-System-Diagnostics"><a href="#使用-System-Diagnostics" class="headerlink" title="使用 System.Diagnostics"></a>使用 System.Diagnostics</h1><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line">Stopwatch stopWatch = Stopwatch.StartNew();</span><br><span class="line"><span class="comment">/*要測試的區塊放這*/</span></span><br><span class="line">stopWatch.Stop();</span><br><span class="line">Trace.WriteLine(<span class="string">&quot;使用時間: &quot;</span>+ stopWatch.ElapsedMilliseconds);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/" data-id="climxtl2s001m84upbed961xd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-c-去除HtmlTag" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/" class="article-date">
+  <time datetime="2023-05-26T08:19:30.000Z" itemprop="datePublished">2023-05-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/">c#去除HtmlTag</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/" data-id="climxtl2i000r84updlry1d3m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-AspNet-UpdatePanel-筆記" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" class="article-date">
+  <time datetime="2023-05-25T09:07:20.000Z" itemprop="datePublished">2023-05-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/">Asp.Net UpdatePanel筆記</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="UpdatePanel"><a href="#UpdatePanel" class="headerlink" title="UpdatePanel"></a>UpdatePanel</h1><h4 id="UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"><a href="#UpdatePanel-是-Asp-net-WebForm-的一個控件，功能是讓區塊內的元素能實現-ajax-讓-post-時不再刷新整個頁面只單獨更新區塊內的控件，使用方式" class="headerlink" title="UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式"></a>UpdatePanel 是 Asp.net WebForm 的一個控件，功能是讓區塊內的元素能實現 ajax 讓 post 時不再刷新整個頁面只單獨更新區塊內的控件，使用方式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;asp:UpdatePanel id=&quot;controlID&quot; runat=&quot;server&quot; UpdateMode=&quot;Always&quot; class=&quot;&quot;&gt;</span><br><span class="line">       &lt;ContentTemplate&gt;</span><br><span class="line">           //需要更新的物件放在這</span><br><span class="line">       &lt;/ContentTemplate&gt;</span><br><span class="line">       &lt;Triggers&gt;</span><br><span class="line">          //監聽的控件事件，事件觸發時會呼叫UpdatePanel的更新方法對Panel做更新</span><br><span class="line">          &lt;asp:AsyncPostBackTrigger ControlID=&quot;controlID&quot; EventName=&quot;eventName&quot; /&gt;</span><br><span class="line">       &lt;/Triggers&gt;</span><br><span class="line"> &lt;/asp:UpdatePanel&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel"><a href="#UpdatePanel-能獲取內部第一層的元素，如果使用-ItemListView-這種底下又有-Template-的控件，那必須-ItemTemplate-中再套一層-UpdatePanel" class="headerlink" title="UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel"></a>UpdatePanel 能獲取內部第一層的元素，如果使用 ItemListView 這種底下又有 Template 的控件，那必須 ItemTemplate 中再套一層 UpdatePanel</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/25/AspNet-UpdatePanel-%E7%AD%86%E8%A8%98/" data-id="climxtl2e000i84upbdi38tph" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-AspNET_WebForm_前端傳遞資料到C#" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" class="article-date">
+  <time datetime="2023-05-23T06:43:01.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/">Asp.NET WebForm前端傳遞資料到C#</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用-HiddenField"><a href="#使用-HiddenField" class="headerlink" title="使用 HiddenField"></a>使用 HiddenField</h1><h5 id="這是-ASP-的-HiddenField-控件"><a href="#這是-ASP-的-HiddenField-控件" class="headerlink" title="這是 ASP 的 HiddenField 控件"></a>這是 ASP 的 HiddenField 控件</h5><h6 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h6><ul>
+<li>ID:ASP 的控件都會需要 ID 這會在 designer.aspx.cs 中使用 ID 名稱自動建立控件提供 aspx.cs 檔案操作控件</li>
+<li>runat:標示為伺服器端控件讓伺服器端可以直接訪問</li>
+<li>Value:可以填一些字串資料在裡面，hiddenField 會用 Post 方法回傳至伺服器端</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;asp:HiddenField ID=&quot;HiddenData&quot; runat=&quot;server&quot; Value=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用-JavaScript-填入資料"><a href="#使用-JavaScript-填入資料" class="headerlink" title="使用 JavaScript 填入資料"></a>使用 JavaScript 填入資料</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用ID訪問元素</span></span><br><span class="line"><span class="keyword">var</span> hiddenField = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#HiddenData&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//跟一般的元素屬性操作一樣，指定vlaue為想要的字串就可以了</span><br><span class="line">hiddenField.value =&quot;我很隱密&quot;</span><br></pre></td></tr></table></figure>
+
+<h5 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h5><h6 id="不能放一些敏感的資訊比如-Token-之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖-CallAPI"><a href="#不能放一些敏感的資訊比如-Token-之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖-CallAPI" class="headerlink" title="不能放一些敏感的資訊比如 Token 之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖 CallAPI"></a>不能放一些敏感的資訊比如 Token 之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖 CallAPI</h6><h1 id="使用-POST"><a href="#使用-POST" class="headerlink" title="使用 POST"></a>使用 POST</h1><h6 id="每次有呼叫頁面都會觸發-WebForm-的-Page-load-事件，這時可以在這裡捕捉-Request-HttpMethod-如果是-POST-在做處裡也可以處裡其他事件"><a href="#每次有呼叫頁面都會觸發-WebForm-的-Page-load-事件，這時可以在這裡捕捉-Request-HttpMethod-如果是-POST-在做處裡也可以處裡其他事件" class="headerlink" title="每次有呼叫頁面都會觸發 WebForm 的 Page_load 事件，這時可以在這裡捕捉 Request.HttpMethod 如果是 POST 在做處裡也可以處裡其他事件"></a>每次有呼叫頁面都會觸發 WebForm 的 Page_load 事件，這時可以在這裡捕捉 Request.HttpMethod 如果是 POST 在做處裡也可以處裡其他事件</h6><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> reader = <span class="keyword">new</span> System.IO.StreamReader(Request.InputStream) )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> body = reader.ReadToEnd();</span><br><span class="line">    <span class="keyword">if</span> (Request.HttpMethod==<span class="string">&quot;POST&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//HandleFunc here</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="URL-參數"><a href="#URL-參數" class="headerlink" title="URL 參數"></a>URL 參數</h1><h5 id="PostBack-時在-Url-裡面塞參數帶回去在做處裡"><a href="#PostBack-時在-Url-裡面塞參數帶回去在做處裡" class="headerlink" title="PostBack 時在 Url 裡面塞參數帶回去在做處裡"></a>PostBack 時在 Url 裡面塞參數帶回去在做處裡</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/" data-id="climxtl2d000g84upfjnu5tma" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C-使用Post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" class="article-date">
+  <time datetime="2023-05-23T06:23:58.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/">C#使用Post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="POST-API"><a href="#POST-API" class="headerlink" title="POST API"></a>POST API</h1><pre><code>    public TResponseModel HttpPost&lt;TRequestModel, TResponseModel&gt;(string url, TRequestModel body)
+    &#123;
+        string postBody = JsonConvert.SerializeObject(body);
+
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.Method = &quot;POST&quot;;
+
+        request.ContentType = &quot;application/json&quot;;
+
+        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+
+        &#123;
+
+            streamWriter.Write(postBody);
+
+        &#125;
+
+        //發出Request
+
+        var httpResponse = (HttpWebResponse)request.GetResponse();
+
+        var streamReader = new StreamReader(httpResponse.GetResponseStream());
+
+        var result = streamReader.ReadToEnd();
+
+        TResponseModel res = JsonConvert.DeserializeObject&lt;TResponseModel&gt;(result);
+
+        return res;
+
+    &#125;
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/" data-id="climxtl2g000l84upfkrj7z5l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2023當兵心得-東引篇" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" class="article-date">
+  <time datetime="2023-04-22T12:31:35.000Z" itemprop="datePublished">2023-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/">2023當兵心得-東引篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
+<h3 id="第二階段-東引地須指揮部步兵連"><a href="#第二階段-東引地須指揮部步兵連" class="headerlink" title="第二階段-東引地須指揮部步兵連"></a>第二階段-東引地須指揮部步兵連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：(核心營區)分123寢，一寢比較大人數會比較多，166梯38人1寢就睡了20幾個士官寢也在一寢還有一個大的雜物區，二寢四張四人上下舖床，三寢沒睡到原本是曬衣間後來便隔離間<br>浴廁：(核心營區)好到不能再好了，除了水壓人多會太低洗澡不好洗大多沒甚麼好挑剔的<br>食物：慘到不能再慘一餐二至四道菜，不好吃就算了還分量稀少沒得加菜</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
+<p>物資匱乏(到4月初前連網路都沒有)</p>
+</blockquote>
+<h5 id="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"><a href="#東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等" class="headerlink" title="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"></a>東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等</h5><h5 id="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"><a href="#單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛" class="headerlink" title="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"></a>單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛</h5><h5 id="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"><a href="#跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了" class="headerlink" title="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"></a>跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了</h5><h5 id="除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試"><a href="#除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試" class="headerlink" title="除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試"></a>除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試</h5><blockquote>
+<p>站哨要幹嘛?看海阿看天空阿，不得不說風景很好風很涼</p>
+</blockquote>
+<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><blockquote>
+<p>當兵好花錢阿</p>
+</blockquote>
+<h5 id="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"><a href="#踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡" class="headerlink" title="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"></a>踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡</h5><h5 id="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"><a href="#食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴" class="headerlink" title="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"></a>食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴</h5><blockquote>
+<p>怎麼一直在領錢啊</p>
+</blockquote>
+<h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/" data-id="climxtl23000384up5xyg1e9x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一頁 &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitPage/" rel="tag">GitPage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TSQL-SQL-SqlServer/" rel="tag">TSQL SQL SqlServer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2023%E7%95%B6%E5%85%B5/" style="font-size: 15px;">2023當兵</a> <a href="/tags/ASP-Net/" style="font-size: 10px;">ASP.Net</a> <a href="/tags/Asp-NET/" style="font-size: 10px;">Asp.NET</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/GitPage/" style="font-size: 10px;">GitPage</a> <a href="/tags/TSQL-SQL-SqlServer/" style="font-size: 10px;">TSQL SQL SqlServer</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/firebase/" style="font-size: 10px;">firebase</a> <a href="/tags/javaScript-lib/" style="font-size: 10px;">javaScript lib</a> <a href="/tags/pixijs/" style="font-size: 15px;">pixijs</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/08/firebase%20IM/">React + Firebase 即時聊天系統</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/">AspMvc路由至靜態Html</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">JsonConvert.DeserializeObject()的空字串遺失字串處理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/">測量程式碼區塊執行時間</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Animations30 Day3 | William的個人空間</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="整理一下目前我對pixi的了解 container   (放圖形的容器可以有很多個，可以用來分組) stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台) loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理) ticker         (Application的成員 ,用來更新畫面) appli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Animations30 Day3">
+<meta property="og:url" content="https://williamlin062.github.io/2020/09/23/Animations30Day3/index.html">
+<meta property="og:site_name" content="William的個人空間">
+<meta property="og:description" content="整理一下目前我對pixi的了解 container   (放圖形的容器可以有很多個，可以用來分組) stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台) loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理) ticker         (Application的成員 ,用來更新畫面) appli">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-09-23T02:10:31.000Z">
+<meta property="article:modified_time" content="2023-06-08T09:26:46.424Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="pixijs">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="William的個人空間" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">William的個人空間</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://williamlin062.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Animations30Day3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/23/Animations30Day3/" class="article-date">
+  <time datetime="2020-09-23T02:10:31.000Z" itemprop="datePublished">2020-09-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Animations30 Day3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="整理一下目前我對pixi的了解"><a href="#整理一下目前我對pixi的了解" class="headerlink" title="整理一下目前我對pixi的了解"></a>整理一下目前我對pixi的了解</h2><ul>
+<li>container   (放圖形的容器可以有很多個，可以用來分組)</li>
+<li>stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台)</li>
+<li>loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理)</li>
+<li>ticker         (Application的成員 ,用來更新畫面)</li>
+<li>application (建立PIXI動畫的class，會自動產生 ticker  ,renderer ,root container)</li>
+</ul>
+<h3 id="大概的藍圖"><a href="#大概的藍圖" class="headerlink" title="大概的藍圖"></a>大概的藍圖</h3><ol>
+<li>載入緩存素材</li>
+<li>初始化</li>
+<li>ticker更新</li>
+<li>其他邏輯</li>
+</ol>
+<h2 id="研究文件"><a href="#研究文件" class="headerlink" title="研究文件"></a>研究文件</h2><p>待續</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://williamlin062.github.io/2020/09/23/Animations30Day3/" data-id="climxtl2c000d84up2iocc279" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/24/tools/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          正在研究和準備研究的工具
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/21/Animations30Day2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Animations30 Day2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分類</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2023%E7%95%B6%E5%85%B5/" rel="tag">2023當兵</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ASP-Net/" rel="tag">ASP.Net</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Asp-NET/" rel="tag">Asp.NET</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitPage/" rel="tag">GitPage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TSQL-SQL-SqlServer/" rel="tag">TSQL SQL SqlServer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/animation/" rel="tag">animation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/" rel="tag">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firebase/" rel="tag">firebase</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaScript-lib/" rel="tag">javaScript lib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pixijs/" rel="tag">pixijs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/" rel="tag">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/2023%E7%95%B6%E5%85%B5/" style="font-size: 15px;">2023當兵</a> <a href="/tags/ASP-Net/" style="font-size: 10px;">ASP.Net</a> <a href="/tags/Asp-NET/" style="font-size: 10px;">Asp.NET</a> <a href="/tags/C/" style="font-size: 20px;">C#</a> <a href="/tags/GitPage/" style="font-size: 10px;">GitPage</a> <a href="/tags/TSQL-SQL-SqlServer/" style="font-size: 10px;">TSQL SQL SqlServer</a> <a href="/tags/animation/" style="font-size: 10px;">animation</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/firebase/" style="font-size: 10px;">firebase</a> <a href="/tags/javaScript-lib/" style="font-size: 10px;">javaScript lib</a> <a href="/tags/pixijs/" style="font-size: 15px;">pixijs</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/06/08/firebase%20IM/">React + Firebase 即時聊天系統</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/">AspMvc路由至靜態Html</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/SQL%E5%84%AA%E5%8C%96/">SQL優化</a>
+          </li>
+        
+          <li>
+            <a href="/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">JsonConvert.DeserializeObject()的空字串遺失字串處理</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/">測量程式碼區塊執行時間</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
