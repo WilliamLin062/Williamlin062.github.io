@@ -10,7 +10,7 @@ cover: https://source.unsplash.com/random/500×500/?code
 
 - [React.js]()
 - Vue.js
-- SvelteSvelte
+- Svelte
 
 # 圖形
 
