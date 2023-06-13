@@ -1,5 +1,5 @@
 ---
-title: WorldEditor_常用技巧_1
+title: WorldEditor常用技巧 1
 date: 2023-06-13 08:28:57
 tags: 
   - WE
