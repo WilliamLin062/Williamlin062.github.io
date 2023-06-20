@@ -78,4 +78,4 @@ public partial class App : Application{
 
 # 心得
 
-### 過去自身 APP 開發都是使用 ReactNative 這種基於 Web 技術的混合式解決方案或者 Native，雖然差異蠻大的但是還是有一小部份經驗是通用的比如視圖的構造
+### 過去自身 APP 開發都是使用 ReactNative 這種基於 Web 技術的混合式解決方案或者 Native,目前覺得大致上差異在使用人數上，xamarin 的參考有點少官方文件也沒寫很明白，學習上有點小卡
