@@ -13,3 +13,7 @@ highlight:
   enable: true
 #URL
 url: https://williamlin062.github.io/
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
