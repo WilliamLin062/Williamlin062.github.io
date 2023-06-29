@@ -6,7 +6,6 @@ tags:
   - C#
   - .Net
 ---
-
 # 動機
 
 ### 因應公司有項目要使用 Xamarin 開發要做準備
@@ -19,13 +18,19 @@ tags:
 
 > _XAML 使用 xmlns XML 屬性進行命名空間聲明。本文介紹 XAML 命名空間語法，並演示如何聲明 XAML 命名空間以訪問類型。_
 
+### 格式如下
+
+```xml
+xmlns:{XML namespace name}="clr-namespace:{.NET namespace}"
+```
+
 ```xml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views ="clr-namespace:Test01"
        xmlns:local ="clr-namespace:Test01.View"
        x:Class="Test01.MainShell"
-       Title="華信APP"
+       Title="APP"
        >
 ```
 
@@ -186,6 +191,4 @@ FlyoutDisplayOptions:設定有多少控件在 FlyoutItem 中時將標籤移至�
 
 ### 說明
 
-# 心得
-
-過去自身 APP 開發都是使用 ReactNative 這種基於 Web 技術的混合式解決方案或者 Native,目前覺得大致上差異在使用人數上，xamarin 的參考有點少官方文件也沒寫很明白，學習上有點小卡
+結果發現Xamarin From也是即將在2024停止維護，後續會被MAUI(Multi-platform App UI)取代因此將開新的一篇直接學習MAUI
