@@ -6,7 +6,7 @@
   <link href="https://williamlin062.github.io/atom.xml" rel="self"/>
   
   <link href="https://williamlin062.github.io/"/>
-  <updated>2023-06-20T07:15:00.062Z</updated>
+  <updated>2023-06-29T03:32:55.453Z</updated>
   <id>https://williamlin062.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode_26 RemoveDuplicates</title>
+    <link href="https://williamlin062.github.io/2023/06/29/leetcode-26/"/>
+    <id>https://williamlin062.github.io/2023/06/29/leetcode-26/</id>
+    <published>2023-06-29T02:09:02.000Z</published>
+    <updated>2023-06-29T03:32:55.453Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">RemoveDuplicates</span>(<span class="params"><span class="built_in">int</span>[] nums</span>)</span> &#123;</span><br><span class="line">            <span class="built_in">int</span> uniqueCount =  nums.Distinct().Count(); <span class="comment">//不重複數量</span></span><br><span class="line">            <span class="built_in">int</span>[] uniqueNumbers = <span class="keyword">new</span> <span class="built_in">int</span>[uniqueCount]; <span class="comment">//建立陣列裝不重複數字</span></span><br><span class="line">            Array.Copy( nums.Distinct().ToArray(), uniqueNumbers, uniqueCount);</span><br><span class="line">            <span class="comment">//複製nums的不重複元素至剛剛建立的陣列</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; uniqueNumbers.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                nums[i] = uniqueNumbers[i];<span class="comment">//取代</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> uniqueCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>因為題目說前面開頭k個數字跟他需要的數字一樣就可以所以不用多餘的數字</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas</summary>
+      
+    
+    
+    
+    
+    <category term="C#" scheme="https://williamlin062.github.io/tags/C/"/>
+    
+    <category term="LeetCode" scheme="https://williamlin062.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何該改dbml連線字串</title>
+    <link href="https://williamlin062.github.io/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/"/>
+    <id>https://williamlin062.github.io/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/</id>
+    <published>2023-06-29T01:50:29.000Z</published>
+    <updated>2023-06-29T02:30:33.256Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連線字串</p><p>但是這兩種方法在把dbml放在單獨的組件中時不起作用，每次重建時都會重製回更改前也無法拖曳資料表到dbml中，於是仔細研究Visual Studio究竟是去哪抓連線字串還有事怎麼新增連線字串的</p><h1 id="更改方法"><a href="#更改方法" class="headerlink" title="更改方法"></a>更改方法</h1><p>Visual Studio將連線字串放置在組件中Properties底下的Settings.settings中</p><p>如要更改連線字串首先打開Settings.settings會出現表格文件</p><img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlChangeConnection.png" class=""><p>這個文件可以添加應用程式屬性和其他資訊，點選最下方欄位或又見可以新增設定</p><p>類型選擇連接字串，若是有其他已經在使用的連接字串請更改使用中的連接字串，VS只會只用當前連接字串會忽視後來新增的，除非有檢測到當前資料表跟資料來源不同才會切換。</p><p>點選 ‘值’欄位最後方會出現編輯選項按鈕點開會出現連接屬性</p><img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlSetting.png" class=""><p>填寫完資料庫伺服器資訊後測試連接成功案確定即可新增&#x2F;該改連接字串。</p><p>修改完後記得重建組件重啟應用程式</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;動機&quot;&gt;&lt;a href=&quot;#動機&quot; class=&quot;headerlink&quot; title=&quot;動機&quot;&gt;&lt;/a&gt;動機&lt;/h1&gt;&lt;p&gt;之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連</summary>
+      
+    
+    
+    
+    
+    <category term="Asp.Net" scheme="https://williamlin062.github.io/tags/Asp-Net/"/>
+    
+  </entry>
   
   <entry>
     <title>SqlServer筆記</title>
@@ -432,55 +478,6 @@
     
     
     <category term="2023當兵" scheme="https://williamlin062.github.io/tags/2023%E7%95%B6%E5%85%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2023 關西-東引當兵心得(關西篇)</title>
-    <link href="https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/"/>
-    <id>https://williamlin062.github.io/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/</id>
-    <published>2023-04-22T08:14:37.000Z</published>
-    <updated>2023-06-08T09:26:46.419Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><hr><h3 id="第一階段-關西206旅2營2連"><a href="#第一階段-關西206旅2營2連" class="headerlink" title="第一階段 關西206旅2營2連"></a>第一階段 關西206旅2營2連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：72人大通鋪4人一床上下鋪環境一般<br>浴廁：廁所很爛小便斗全壞，蹲式也有幾間故障72人用四間蹲式大小便，二樓浴室尚可三樓有間只有熱水<br>食物：五菜一湯品項在比較各單位之後算好了，但是時常過油過鹹，蛋永遠有焦味</p><h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote><p>第一二周都是在填資料還有聽招募比較多，以下是正式開始上課的日常</p></blockquote><p>5:30 起床折棉被換衣服廁所排隊<br>6:20 集合取裝&#x2F;吃飯<br>7:40 早點名&#x2F;集合<br>操課(基本教練&#x2F;單戰&#x2F;射擊預習&#x2F;刺槍術&#x2F;手投&#x2F;打靶)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:20 起床準備集合<br>操課<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯</p><h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><p>沒什麼彈性，假如你不曾聽過快樂釐頭山、金六結快樂營、隔壁五營，然後抱著一顆無慾無求心跟做好會遇到最壞狀況的心理建設，那恭喜你在這邊過一個月沒問題，我在進來前問過剛從這退的同學這裡生活怎麼樣，他是這樣描述</p><blockquote><p>前面精神上的痛苦後面肉體上的痛苦</p></blockquote><h5 id="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"><a href="#進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣" class="headerlink" title="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"></a>進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣</h5><h5 id="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"><a href="#在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話" class="headerlink" title="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"></a>在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話</h5><blockquote><p>沒有慾望就沒有痛苦、欲望會帶來痛苦如果洗澡會讓你痛苦就別洗了吧</p></blockquote><h4 id="準備物品"><a href="#準備物品" class="headerlink" title="準備物品"></a>準備物品</h4><h5 id="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"><a href="#濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀" class="headerlink" title="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"></a>濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀</h5><blockquote><p>入營後會給營站購買清單記得都買齊<br>建議買防水袋四個，裝錢包鞋油小東西很好用<br>不用帶書了沒時間看，帶了也會被收走書籍屬於違禁品<br>別帶腦子</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考&quot;&gt;&lt;a href=&quot;#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一</summary>
-      
-    
-    
-    
-    
-    <category term="2023當兵" scheme="https://williamlin062.github.io/tags/2023%E7%95%B6%E5%85%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>正在研究和準備研究的工具</title>
-    <link href="https://williamlin062.github.io/2020/09/24/tools/"/>
-    <id>https://williamlin062.github.io/2020/09/24/tools/</id>
-    <published>2020-09-24T03:26:17.000Z</published>
-    <updated>2023-06-09T08:23:41.386Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h1><ul><li><a href="">React.js</a></li><li>Vue.js</li><li>Svelte</li></ul><h1 id="圖形"><a href="#圖形" class="headerlink" title="圖形"></a>圖形</h1><ul><li><a href="https://cooltext.com/https://cooltext.com/">cooltext</a></li><li><a href="https://vectorjs.org/">vectorjs</a></li></ul><h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><ul><li><a href="https://nwjs.io/">nwjs</a></li></ul><h1 id="動畫"><a href="#動畫" class="headerlink" title="動畫"></a>動畫</h1><ul><li><a href="">PIXI.js</a></li><li><a href="https://github.com/kittykatattack/hexi">HEXI.js</a></li><li><a href="https://matthew.wagerfield.com/parallax/">視差</a></li><li><a href="https://greensock.com/gsap/">gsap</a></li><li><a href="https://threejs.org/">tree.js</a></li></ul><h1 id="音效"><a href="#音效" class="headerlink" title="音效"></a>音效</h1><ul><li><a href="https://www.bfxr.net/">bfxr</a></li></ul><h1 id="遊戲素材"><a href="#遊戲素材" class="headerlink" title="遊戲素材"></a>遊戲素材</h1><ul><li><a href="https://opengameart.org/content/oves-essential-game-audio-pack-collection-160-files-updated">音效合集</a></li><li><a href="https://opengameart.org/content/generic-8-bit-jrpg-soundtrack">8bit</a></li><li><a href="https://0x72.itch.io/dungeontileset-ii">地牢磁磚</a></li></ul><h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><p><a href="https://www.npmjs.com/package/jwt-decode">jwt-decode</a></p><p><a href="">day.js</a></p><p><a href="">lerna</a></p><h1 id="文字編輯器"><a href="#文字編輯器" class="headerlink" title="文字編輯器"></a>文字編輯器</h1><ul><li><a href="https://quilljs.com/">quilljs</a></li></ul><h1 id="遊戲"><a href="#遊戲" class="headerlink" title="遊戲"></a>遊戲</h1><ul><li><a href="https://www.mapeditor.org/">Tiled</a> 貼圖編輯器</li><li><a href="http://phaser.io/news">phaser</a> 遊戲框架</li><li><a href="http://free-tex-packer.com/download/">Free texture packer</a></li><li><a href="https://github.com/sporadic-labs/tile-extruder">tile extruder</a> 平滑圖塊邊緣交接處</li><li><a href="http://dragonbones.com/cn/animation.html">DragonBones</a> 2d動態貼圖</li></ul><h1 id="測試"><a href="#測試" class="headerlink" title="測試"></a>測試</h1><ul><li>Nightwatch.js</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;前端框架&quot;&gt;&lt;a href=&quot;#前端框架&quot; class=&quot;headerlink&quot; title=&quot;前端框架&quot;&gt;&lt;/a&gt;前端框架&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;&quot;&gt;React.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Vue.js&lt;/li&gt;
-&lt;li&gt;Svelte&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="javaScript lib" scheme="https://williamlin062.github.io/tags/javaScript-lib/"/>
-    
-    <category term="tool" scheme="https://williamlin062.github.io/tags/tool/"/>
     
   </entry>
   
