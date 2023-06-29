@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo GitPage初次使用</title>
+    <url>/2020/09/15/2020-09-15/</url>
+    <content><![CDATA[<h5 id="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法"><a href="#前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法" class="headerlink" title="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法"></a>前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</h5><h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
+<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>GitPage</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2023當兵心得-東引篇</title>
     <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/</url>
     <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
@@ -20,23 +40,27 @@
 <h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>]]></content>
   </entry>
   <entry>
-    <title>Hexo GitPage初次使用</title>
-    <url>/2020/09/15/2020-09-15/</url>
-    <content><![CDATA[<h5 id="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法"><a href="#前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法" class="headerlink" title="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法"></a>前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</h5><h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
-<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
+    <title>2023 關西-東引當兵心得(關西篇)</title>
+    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><hr>
+<h3 id="第一階段-關西206旅2營2連"><a href="#第一階段-關西206旅2營2連" class="headerlink" title="第一階段 關西206旅2營2連"></a>第一階段 關西206旅2營2連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：72人大通鋪4人一床上下鋪環境一般<br>浴廁：廁所很爛小便斗全壞，蹲式也有幾間故障72人用四間蹲式大小便，二樓浴室尚可三樓有間只有熱水<br>食物：五菜一湯品項在比較各單位之後算好了，但是時常過油過鹹，蛋永遠有焦味</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
+<p>第一二周都是在填資料還有聽招募比較多，以下是正式開始上課的日常</p>
+</blockquote>
+<p>5:30 起床折棉被換衣服廁所排隊<br>6:20 集合取裝&#x2F;吃飯<br>7:40 早點名&#x2F;集合<br>操課(基本教練&#x2F;單戰&#x2F;射擊預習&#x2F;刺槍術&#x2F;手投&#x2F;打靶)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:20 起床準備集合<br>操課<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯</p>
+<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><p>沒什麼彈性，假如你不曾聽過快樂釐頭山、金六結快樂營、隔壁五營，然後抱著一顆無慾無求心跟做好會遇到最壞狀況的心理建設，那恭喜你在這邊過一個月沒問題，我在進來前問過剛從這退的同學這裡生活怎麼樣，他是這樣描述</p>
+<blockquote>
+<p>前面精神上的痛苦後面肉體上的痛苦</p>
+</blockquote>
+<h5 id="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"><a href="#進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣" class="headerlink" title="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"></a>進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣</h5><h5 id="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"><a href="#在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話" class="headerlink" title="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"></a>在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話</h5><blockquote>
+<p>沒有慾望就沒有痛苦、欲望會帶來痛苦如果洗澡會讓你痛苦就別洗了吧</p>
+</blockquote>
+<h4 id="準備物品"><a href="#準備物品" class="headerlink" title="準備物品"></a>準備物品</h4><h5 id="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"><a href="#濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀" class="headerlink" title="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"></a>濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀</h5><blockquote>
+<p>入營後會給營站購買清單記得都買齊<br>建議買防水袋四個，裝錢包鞋油小東西很好用<br>不用帶書了沒時間看，帶了也會被收走書籍屬於違禁品<br>別帶腦子</p>
+</blockquote>
 ]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
       <tags>
-        <tag>blog</tag>
-        <tag>GitPage</tag>
+        <tag>2023當兵</tag>
       </tags>
   </entry>
   <entry>
@@ -64,30 +88,6 @@
         <tag>ASP.NET</tag>
         <tag>ASP.NET_WebFrom</tag>
         <tag>ASP.NET_MVC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2023 關西-東引當兵心得(關西篇)</title>
-    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/</url>
-    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><hr>
-<h3 id="第一階段-關西206旅2營2連"><a href="#第一階段-關西206旅2營2連" class="headerlink" title="第一階段 關西206旅2營2連"></a>第一階段 關西206旅2營2連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：72人大通鋪4人一床上下鋪環境一般<br>浴廁：廁所很爛小便斗全壞，蹲式也有幾間故障72人用四間蹲式大小便，二樓浴室尚可三樓有間只有熱水<br>食物：五菜一湯品項在比較各單位之後算好了，但是時常過油過鹹，蛋永遠有焦味</p>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
-<p>第一二周都是在填資料還有聽招募比較多，以下是正式開始上課的日常</p>
-</blockquote>
-<p>5:30 起床折棉被換衣服廁所排隊<br>6:20 集合取裝&#x2F;吃飯<br>7:40 早點名&#x2F;集合<br>操課(基本教練&#x2F;單戰&#x2F;射擊預習&#x2F;刺槍術&#x2F;手投&#x2F;打靶)<br>11:00 準備吃飯<br>12:00 吃飯午休<br>13:20 起床準備集合<br>操課<br>16:00 運動<br>17:00 準備吃飯&#x2F;盥洗<br>18:00 吃飯</p>
-<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><p>沒什麼彈性，假如你不曾聽過快樂釐頭山、金六結快樂營、隔壁五營，然後抱著一顆無慾無求心跟做好會遇到最壞狀況的心理建設，那恭喜你在這邊過一個月沒問題，我在進來前問過剛從這退的同學這裡生活怎麼樣，他是這樣描述</p>
-<blockquote>
-<p>前面精神上的痛苦後面肉體上的痛苦</p>
-</blockquote>
-<h5 id="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"><a href="#進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術-、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣" class="headerlink" title="進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣"></a>進去後每度過一天這句話的體悟就越深刻，第一週努力融入環境一堆東西要記，第二週有招募雖然比較不無聊但是在那個椅子上坐幾個小時屁股真的受不了，建議招募能多聽就多聽只有好處沒有壞處，第三週後開始正常操課肉體開始感到痛苦精神的痛苦並沒有減少太多只是來源變得很多元一言難盡，刺不完的最後一次刺槍術 、非常糟糕的廁所、密集的登山、白目弟兄、沒福利只有破事的洗衣公差、越來越累的身體，我們這梯最大的幸運就是沒有在操課的時候遇到大雨不曾穿過雨衣</h5><h5 id="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"><a href="#在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話" class="headerlink" title="在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話"></a>在那邊來痛苦的來源大致來自兩個一是來自同袍弟兄二是來自生活環境，會搞你的永遠是自己人如何調適心理是在那邊生活我覺得最重要的課題，生活環境廁所糟透了洗滌區也糟透了在休息時間分秒必爭的狀況下可以看到鄰兵如何快速吃完飯洗完碗使用各種手段完成洗澡這活動。洗不到澡乾脆不洗澡是常態，給未來到2營2連的弟兄一句話</h5><blockquote>
-<p>沒有慾望就沒有痛苦、欲望會帶來痛苦如果洗澡會讓你痛苦就別洗了吧</p>
-</blockquote>
-<h4 id="準備物品"><a href="#準備物品" class="headerlink" title="準備物品"></a>準備物品</h4><h5 id="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"><a href="#濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆-2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀" class="headerlink" title="濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀"></a>濕紙巾、衛生紙、洗碗精、菜瓜布、奇異筆、黑藍筆*2、姓名貼沒有拿透氣膠帶或者其他方法自行應變、膠帶、行充、錢2500左右、免洗筷、盥洗物品、指甲剪、刮鬍刀</h5><blockquote>
-<p>入營後會給營站購買清單記得都買齊<br>建議買防水袋四個，裝錢包鞋油小東西很好用<br>不用帶書了沒時間看，帶了也會被收走書籍屬於違禁品<br>別帶腦子</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>2023當兵</tag>
       </tags>
   </entry>
   <entry>
@@ -167,18 +167,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JASS_基本函數筆記</title>
-    <url>/2023/06/13/JASS-%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B8%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<blockquote>
-<p>使用Ctrl + F快速搜尋</p>
-</blockquote>
-<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家"><a href="#將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家" class="headerlink" title="將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家"></a>將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家</h3>]]></content>
-      <tags>
-        <tag>WE</tag>
-        <tag>JASS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C#使用Post</title>
     <url>/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/</url>
     <content><![CDATA[<h1 id="POST-API"><a href="#POST-API" class="headerlink" title="POST API"></a>POST API</h1><pre><code>    public TResponseModel HttpPost&lt;TRequestModel, TResponseModel&gt;(string url, TRequestModel body)
@@ -216,6 +204,18 @@
 ]]></content>
       <tags>
         <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JASS_基本函數筆記</title>
+    <url>/2023/06/13/JASS-%E5%9F%BA%E6%9C%AC%E5%87%BD%E6%95%B8%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<blockquote>
+<p>使用Ctrl + F快速搜尋</p>
+</blockquote>
+<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家"><a href="#將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家" class="headerlink" title="將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家"></a>將一些過去的經驗整理出來，有人來問時可以比較有系統的將知識傳遞給對方，近年資源也日漸稀少而且分散做個紀錄也方便大家</h3>]]></content>
+      <tags>
+        <tag>WE</tag>
+        <tag>JASS</tag>
       </tags>
   </entry>
   <entry>
@@ -263,6 +263,28 @@
       </tags>
   </entry>
   <entry>
+    <title>MAUI學習筆記</title>
+    <url>/2023/06/29/MAUI%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>需要使用C#開發APP</p>
+<h1 id="施工中…"><a href="#施工中…" class="headerlink" title="施工中…"></a>施工中…</h1>]]></content>
+      <tags>
+        <tag>C#</tag>
+        <tag>MAUI</tag>
+        <tag>跨平台開發</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLServer還原DB</title>
+    <url>/2023/06/13/SQLServer%E9%82%84%E5%8E%9FDB/</url>
+    <content><![CDATA[<h1 id="還原DB"><a href="#還原DB" class="headerlink" title="還原DB"></a>還原DB</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--讀取備份檔案，因為要知道到Data跟Log的名稱 這邊的N代表是Unicode</span></span><br><span class="line">RESTORE FILELISTONLY</span><br><span class="line"><span class="keyword">FROM</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line">go</span><br><span class="line"><span class="comment">--要先創建一個新資料庫還有記得切換到master，還原到正在執行時的資料庫時記得確定沒有東西在使用資料庫不然會跳錯</span></span><br><span class="line">restore database [newDB NAME]</span><br><span class="line"><span class="keyword">from</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line"><span class="keyword">WITH</span>  </span><br><span class="line">move <span class="string">&#x27;[DataFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_DataFileName.mdf_PATH]&#x27;</span>,</span><br><span class="line">move <span class="string">&#x27;[LogFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_LogFileName.ldf_PATH]&#x27;</span>,</span><br><span class="line">Replace, Recovery</span><br><span class="line">GO</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>t-sql</tag>
+        <tag>SQL</tag>
+        <tag>SQLServer</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL優化</title>
     <url>/2023/06/06/SQL%E5%84%AA%E5%8C%96/</url>
     <content><![CDATA[<h1 id="SQL-Server-事件監視器"><a href="#SQL-Server-事件監視器" class="headerlink" title="SQL Server 事件監視器"></a>SQL Server 事件監視器</h1><h3 id="開啟位置-工具-gt-SQL-Server-Profiler"><a href="#開啟位置-工具-gt-SQL-Server-Profiler" class="headerlink" title="開啟位置 [工具]-&gt;SQL Server Profiler"></a>開啟位置 [工具]-&gt;SQL Server Profiler</h3><h4 id="SQL-Server-Profiler-是一個很有用的工具，可以看-SQL-在執行時實際在發生哪些事情"><a href="#SQL-Server-Profiler-是一個很有用的工具，可以看-SQL-在執行時實際在發生哪些事情" class="headerlink" title="SQL Server Profiler 是一個很有用的工具，可以看 SQL 在執行時實際在發生哪些事情"></a>SQL Server Profiler 是一個很有用的工具，可以看 SQL 在執行時實際在發生哪些事情</h4><h4 id="還有查看-TSQL-在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能"><a href="#還有查看-TSQL-在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能" class="headerlink" title="還有查看 TSQL 在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能"></a>還有查看 TSQL 在執行時的樣子，可以找出一些不好找到的錯誤還有追蹤效能</h4><h1 id="SQL-Server-執行計畫-用戶端統計資料"><a href="#SQL-Server-執行計畫-用戶端統計資料" class="headerlink" title="SQL Server 執行計畫 用戶端統計資料"></a>SQL Server 執行計畫 用戶端統計資料</h1><h3 id="開啟位置-查詢-gt-包括用戶端統計資料-x2F-包括實際執行計畫"><a href="#開啟位置-查詢-gt-包括用戶端統計資料-x2F-包括實際執行計畫" class="headerlink" title="開啟位置 [查詢] -&gt; 包括用戶端統計資料 &#x2F; 包括實際執行計畫"></a>開啟位置 [查詢] -&gt; 包括用戶端統計資料 &#x2F; 包括實際執行計畫</h3><h4 id="可以看到-SQL-執行每段查詢時的效能還有用戶端使用時間"><a href="#可以看到-SQL-執行每段查詢時的效能還有用戶端使用時間" class="headerlink" title="可以看到 SQL 執行每段查詢時的效能還有用戶端使用時間"></a>可以看到 SQL 執行每段查詢時的效能還有用戶端使用時間</h4><h1 id="用-UNION-ALL-取代大量-OR"><a href="#用-UNION-ALL-取代大量-OR" class="headerlink" title="用 UNION ALL 取代大量 OR"></a>用 UNION ALL 取代大量 OR</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">            <span class="comment">--未修改前 執行時間為 12秒 CPU使用率100%</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br><span class="line"></span><br><span class="line">            <span class="comment">--建立 PreMember暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> pmcu.<span class="operator">*</span> , cdcu.DEPT_Boss</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMember</span><br><span class="line">            <span class="keyword">FROM</span> (</span><br><span class="line">            (<span class="keyword">SELECT</span> cu.EP_DeptSno , cu.EP_CName , pm.<span class="operator">*</span></span><br><span class="line">             <span class="keyword">FROM</span> CM_Pre_Member pm <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> PM.EP_Id <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> pmcu <span class="keyword">JOIN</span></span><br><span class="line">            (<span class="keyword">SELECT</span> DEPT_Sno , DEPT_Boss <span class="keyword">FROM</span> CP_Dept cd ) <span class="keyword">AS</span> cdcu <span class="keyword">ON</span> pmcu.EP_DeptSno <span class="operator">=</span> cdcu.DEPT_Sno</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">            <span class="comment">--使用於Blacklist用</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line"></span><br><span class="line">            <span class="comment">--使用於Select準會員</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">            <span class="keyword">INTO</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TPM.<span class="operator">*</span> , cu.EP_Id <span class="keyword">AS</span> BossID , cu.EP_CName <span class="keyword">AS</span> BossName <span class="keyword">FROM</span> #TempPreMember TPM <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> CP_User cu <span class="keyword">ON</span> TPM.DEPT_Boss <span class="operator">=</span> cu.EP_Id) <span class="keyword">AS</span> temp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="comment">--建立 Blacklist暫存Table</span></span><br><span class="line">            <span class="keyword">SELECT</span> AutoNo , CName ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel1 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel1 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel1,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel1 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel2 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel2 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel2,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel2 ,</span><br><span class="line">            <span class="keyword">CASE</span> <span class="keyword">WHEN</span> Tel3 <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> Tel3 <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="keyword">NULL</span> <span class="keyword">ELSE</span> Replace(Tel3,<span class="string">&#x27;-&#x27;</span>,<span class="string">&#x27;&#x27;</span>) <span class="keyword">END</span> <span class="keyword">AS</span> PM_Tel3</span><br><span class="line">            <span class="keyword">INTO</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> ESIC_ERP.dbo.Blacklist <span class="keyword">WHERE</span> Tel1 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel2 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> Tel3 <span class="operator">&lt;&gt;</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 這段花費88%時間處理，一半時間在處理or巢狀迴圈另一半在處理 插入暫存表#TempPreBlacklist</span></span><br><span class="line">            <span class="comment">--建立BlackList內層 用於區分是否為黑名單成員</span></span><br><span class="line">            <span class="comment">--SELECT TB.AutoNo , TB.CName , TPMJ.PM_Sno , TPMJ.EP_CName</span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMJ.<span class="operator">*</span> , TB.AutoNo , TB.CName , TB.PM_Tel1 <span class="keyword">AS</span> T1 , TB.PM_Tel2 <span class="keyword">AS</span> T2 , TB.PM_Tel3 <span class="keyword">AS</span> T3</span><br><span class="line">            <span class="keyword">INTO</span> #TempPreBlacklist</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberJoin TPMJ <span class="keyword">JOIN</span> #TempBlacklist TB</span><br><span class="line">            <span class="keyword">ON</span> TPMJ.EP_CName <span class="operator">=</span> TB.CName <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel1 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel2 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel3 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel4 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel5 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel6 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span></span><br><span class="line">            TPMJ.PM_Tel7 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Tel8 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Fax2 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile1 <span class="operator">=</span> TB.PM_Tel3 <span class="keyword">OR</span> TPMJ.PM_Mobile2 <span class="operator">=</span> TB.PM_Tel3</span><br><span class="line"></span><br><span class="line">            <span class="comment">--計算數量</span></span><br><span class="line">            <span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> DataCount</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm</span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">--條列出每個內容</span></span><br><span class="line">            <span class="keyword">SELECT</span> TPMLJ.<span class="operator">*</span> , bk_list , <span class="keyword">CASE</span> <span class="keyword">WHEN</span> TPMLJ.BossID <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">OR</span> TPMLJ.BossID <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">THEN</span> <span class="string">&#x27;(無主管資料)&#x27;</span> <span class="keyword">ELSE</span> TPMLJ.BossName <span class="keyword">END</span> bkcname</span><br><span class="line">            <span class="keyword">FROM</span> #TempPreMemberLeftJoin <span class="keyword">AS</span> TPMLJ</span><br><span class="line">            <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> TPB.PM_Sno , TPB.EP_CName , <span class="string">&#x27;黑名單&#x27;</span> <span class="keyword">AS</span> bk_list <span class="keyword">FROM</span> CM_Pre_Member pm</span><br><span class="line">            			<span class="keyword">INNER</span> <span class="keyword">JOIN</span> #TempPreBlacklist <span class="keyword">AS</span> TPB</span><br><span class="line">            			<span class="keyword">ON</span> TPB.PM_Sno <span class="operator">=</span> pm.PM_Sno) <span class="keyword">AS</span> TempTable</span><br><span class="line">            <span class="keyword">ON</span> TPMLJ.PM_Sno <span class="operator">=</span> TempTable.PM_Sno <span class="keyword">WHERE</span> TPMLJ.PM_IsOk <span class="operator">=</span> <span class="string">&#x27;Y&#x27;</span> &#123;whereSb&#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMemberLeftJoin</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreMember</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempBlacklist</span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> #TempPreBlacklist</span><br></pre></td></tr></table></figure>
@@ -283,23 +305,6 @@
       <tags>
         <tag>SQlServer</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>SQLServer還原DB</title>
-    <url>/2023/06/13/SQLServer%E9%82%84%E5%8E%9FDB/</url>
-    <content><![CDATA[<h1 id="還原DB"><a href="#還原DB" class="headerlink" title="還原DB"></a>還原DB</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--讀取備份檔案，因為要知道到Data跟Log的名稱 這邊的N代表是Unicode</span></span><br><span class="line">RESTORE FILELISTONLY</span><br><span class="line"><span class="keyword">FROM</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line">go</span><br><span class="line"><span class="comment">--要先創建一個新資料庫還有記得切換到master，還原到正在執行時的資料庫時記得確定沒有東西在使用資料庫不然會跳錯</span></span><br><span class="line">restore database [newDB NAME]</span><br><span class="line"><span class="keyword">from</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line"><span class="keyword">WITH</span>  </span><br><span class="line">move <span class="string">&#x27;[DataFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_DataFileName.mdf_PATH]&#x27;</span>,</span><br><span class="line">move <span class="string">&#x27;[LogFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_LogFileName.ldf_PATH]&#x27;</span>,</span><br><span class="line">Replace, Recovery</span><br><span class="line">GO</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>t-sql</tag>
-        <tag>SQL</tag>
-        <tag>SQLServer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>c#去除HtmlTag</title>
-    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
-    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
   </entry>
   <entry>
     <title>WorldEditor常用技巧 1</title>
@@ -390,6 +395,24 @@
       </tags>
   </entry>
   <entry>
+    <title>c#去除HtmlTag</title>
+    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
+    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>leetcode_26 RemoveDuplicates</title>
+    <url>/2023/06/29/leetcode-26/</url>
+    <content><![CDATA[<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">RemoveDuplicates</span>(<span class="params"><span class="built_in">int</span>[] nums</span>)</span> &#123;</span><br><span class="line">            <span class="built_in">int</span> uniqueCount =  nums.Distinct().Count(); <span class="comment">//不重複數量</span></span><br><span class="line">            <span class="built_in">int</span>[] uniqueNumbers = <span class="keyword">new</span> <span class="built_in">int</span>[uniqueCount]; <span class="comment">//建立陣列裝不重複數字</span></span><br><span class="line">            Array.Copy( nums.Distinct().ToArray(), uniqueNumbers, uniqueCount);</span><br><span class="line">            <span class="comment">//複製nums的不重複元素至剛剛建立的陣列</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; uniqueNumbers.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                nums[i] = uniqueNumbers[i];<span class="comment">//取代</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> uniqueCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因為題目說前面開頭k個數字跟他需要的數字一樣就可以所以不用多餘的數字</p>
+]]></content>
+      <tags>
+        <tag>C#</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正在研究和準備研究的工具</title>
     <url>/2020/09/24/tools/</url>
     <content><![CDATA[<h1 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h1><ul>
@@ -442,45 +465,14 @@
       </tags>
   </entry>
   <entry>
-    <title>leetcode_26 RemoveDuplicates</title>
-    <url>/2023/06/29/leetcode-26/</url>
-    <content><![CDATA[<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">RemoveDuplicates</span>(<span class="params"><span class="built_in">int</span>[] nums</span>)</span> &#123;</span><br><span class="line">            <span class="built_in">int</span> uniqueCount =  nums.Distinct().Count(); <span class="comment">//不重複數量</span></span><br><span class="line">            <span class="built_in">int</span>[] uniqueNumbers = <span class="keyword">new</span> <span class="built_in">int</span>[uniqueCount]; <span class="comment">//建立陣列裝不重複數字</span></span><br><span class="line">            Array.Copy( nums.Distinct().ToArray(), uniqueNumbers, uniqueCount);</span><br><span class="line">            <span class="comment">//複製nums的不重複元素至剛剛建立的陣列</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; uniqueNumbers.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                nums[i] = uniqueNumbers[i];<span class="comment">//取代</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> uniqueCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>因為題目說前面開頭k個數字跟他需要的數字一樣就可以所以不用多餘的數字</p>
-]]></content>
-      <tags>
-        <tag>C#</tag>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何該改dbml連線字串</title>
-    <url>/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/</url>
-    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連線字串</p>
-<p>但是這兩種方法在把dbml放在單獨的組件中時不起作用，每次重建時都會重製回更改前也無法拖曳資料表到dbml中，於是仔細研究Visual Studio究竟是去哪抓連線字串還有事怎麼新增連線字串的</p>
-<h1 id="更改方法"><a href="#更改方法" class="headerlink" title="更改方法"></a>更改方法</h1><p>Visual Studio將連線字串放置在組件中Properties底下的Settings.settings中</p>
-<p>如要更改連線字串首先打開Settings.settings會出現表格文件</p>
-<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlChangeConnection.png" class="">
-
-<p>這個文件可以添加應用程式屬性和其他資訊，點選最下方欄位或又見可以新增設定</p>
-<p>類型選擇連接字串，若是有其他已經在使用的連接字串請更改使用中的連接字串，VS只會只用當前連接字串會忽視後來新增的，除非有檢測到當前資料表跟資料來源不同才會切換。</p>
-<p>點選 ‘值’欄位最後方會出現編輯選項按鈕點開會出現連接屬性</p>
-<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlSetting.png" class="">
-
-<p>填寫完資料庫伺服器資訊後測試連接成功案確定即可新增&#x2F;該改連接字串。</p>
-<p>修改完後記得重建組件重啟應用程式</p>
-]]></content>
-      <tags>
-        <tag>Asp.Net</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>xamarin學習筆記</title>
     <url>/2023/06/17/xamarin%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="因應公司有項目要使用-Xamarin-開發要做準備"><a href="#因應公司有項目要使用-Xamarin-開發要做準備" class="headerlink" title="因應公司有項目要使用 Xamarin 開發要做準備"></a>因應公司有項目要使用 Xamarin 開發要做準備</h3><h1 id="Xamarin-根元素屬性"><a href="#Xamarin-根元素屬性" class="headerlink" title="Xamarin 根元素屬性"></a>Xamarin 根元素屬性</h1><h2 id="命名空間-xmlns"><a href="#命名空間-xmlns" class="headerlink" title="命名空間 xmlns"></a>命名空間 xmlns</h2><h3 id="根據官方文件說明"><a href="#根據官方文件說明" class="headerlink" title="根據官方文件說明"></a>根據官方文件說明</h3><blockquote>
 <p><em>XAML 使用 xmlns XML 屬性進行命名空間聲明。本文介紹 XAML 命名空間語法，並演示如何聲明 XAML 命名空間以訪問類型。</em></p>
 </blockquote>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Shell</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://xamarin.com/schemas/2014/forms&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:views</span> =<span class="string">&quot;clr-namespace:Test01&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:local</span> =<span class="string">&quot;clr-namespace:Test01.View&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">x:Class</span>=<span class="string">&quot;Test01.MainShell&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">Title</span>=<span class="string">&quot;華信APP&quot;</span></span></span><br><span class="line"><span class="tag">       &gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式如下"><a href="#格式如下" class="headerlink" title="格式如下"></a>格式如下</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:&#123;XML namespace name&#125;=&quot;clr-namespace:&#123;.NET namespace&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Shell</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://xamarin.com/schemas/2014/forms&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:views</span> =<span class="string">&quot;clr-namespace:Test01&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:local</span> =<span class="string">&quot;clr-namespace:Test01.View&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">x:Class</span>=<span class="string">&quot;Test01.MainShell&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">Title</span>=<span class="string">&quot;APP&quot;</span></span></span><br><span class="line"><span class="tag">       &gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h2><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">xmlns=<span class="string">&quot;http://xamarin.com/schemas/2014/forms&quot;</span></span><br><span class="line"><span class="comment">//第一個命名空間 將整個XAML命名空間應設為默認命名空間</span></span><br><span class="line"><span class="comment">//WPF程序集會將比如System.Windows System.Windows.Controls映射到這類命名空間</span></span><br></pre></td></tr></table></figure>
 
@@ -521,12 +513,33 @@
 
 <h1 id="Application-Resources"><a href="#Application-Resources" class="headerlink" title="Application.Resources"></a>Application.Resources</h1><h3 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Application</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://xamarin.com/schemas/2014/forms&quot;</span></span></span><br><span class="line"><span class="tag">             <span class="attr">xmlns:x</span>=<span class="string">&quot;http://schemas.microsoft.com/winfx/2009/xaml&quot;</span></span></span><br><span class="line"><span class="tag">             <span class="attr">x:Class</span>=<span class="string">&quot;Test01.App&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Application.Resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Application</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="說明-1"><a href="#說明-1" class="headerlink" title="說明"></a>說明</h3><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>過去自身 APP 開發都是使用 ReactNative 這種基於 Web 技術的混合式解決方案或者 Native,目前覺得大致上差異在使用人數上，xamarin 的參考有點少官方文件也沒寫很明白，學習上有點小卡</p>
+<h3 id="說明-1"><a href="#說明-1" class="headerlink" title="說明"></a>說明</h3><p>結果發現Xamarin From也是即將在2024停止維護，後續會被MAUI(Multi-platform App UI)取代因此將開新的一篇直接學習MAUI</p>
 ]]></content>
       <tags>
         <tag>C#</tag>
         <tag>xamarin</tag>
         <tag>.Net</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何該改dbml連線字串</title>
+    <url>/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/</url>
+    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連線字串</p>
+<p>但是這兩種方法在把dbml放在單獨的組件中時不起作用，每次重建時都會重製回更改前也無法拖曳資料表到dbml中，於是仔細研究Visual Studio究竟是去哪抓連線字串還有事怎麼新增連線字串的</p>
+<h1 id="更改方法"><a href="#更改方法" class="headerlink" title="更改方法"></a>更改方法</h1><p>Visual Studio將連線字串放置在組件中Properties底下的Settings.settings中</p>
+<p>如要更改連線字串首先打開Settings.settings會出現表格文件</p>
+<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlChangeConnection.png" class="">
+
+<p>這個文件可以添加應用程式屬性和其他資訊，點選最下方欄位或又見可以新增設定</p>
+<p>類型選擇連接字串，若是有其他已經在使用的連接字串請更改使用中的連接字串，VS只會只用當前連接字串會忽視後來新增的，除非有檢測到當前資料表跟資料來源不同才會切換。</p>
+<p>點選 ‘值’欄位最後方會出現編輯選項按鈕點開會出現連接屬性</p>
+<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlSetting.png" class="">
+
+<p>填寫完資料庫伺服器資訊後測試連接成功案確定即可新增&#x2F;該改連接字串。</p>
+<p>修改完後記得重建組件重啟應用程式</p>
+]]></content>
+      <tags>
+        <tag>Asp.Net</tag>
       </tags>
   </entry>
   <entry>
