@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo GitPage初次使用</title>
+    <url>/2020/09/15/2020-09-15/</url>
+    <content><![CDATA[<h5 id="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法"><a href="#前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法" class="headerlink" title="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法"></a>前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</h5><h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
+<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>GitPage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2023當兵心得-東引篇</title>
+    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/</url>
+    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
+<h3 id="第二階段-東引地須指揮部步兵連"><a href="#第二階段-東引地須指揮部步兵連" class="headerlink" title="第二階段-東引地須指揮部步兵連"></a>第二階段-東引地須指揮部步兵連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：(核心營區)分123寢，一寢比較大人數會比較多，166梯38人1寢就睡了20幾個士官寢也在一寢還有一個大的雜物區，二寢四張四人上下舖床，三寢沒睡到原本是曬衣間後來便隔離間<br>浴廁：(核心營區)好到不能再好了，除了水壓人多會太低洗澡不好洗大多沒甚麼好挑剔的<br>食物：慘到不能再慘一餐二至四道菜，不好吃就算了還分量稀少沒得加菜</p>
+<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
+<p>物資匱乏(到4月初前連網路都沒有)</p>
+</blockquote>
+<h5 id="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"><a href="#東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等" class="headerlink" title="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"></a>東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等</h5><h5 id="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"><a href="#單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛" class="headerlink" title="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"></a>單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛</h5><h5 id="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"><a href="#跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了" class="headerlink" title="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"></a>跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了</h5><h5 id="除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試"><a href="#除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試" class="headerlink" title="除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試"></a>除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試</h5><blockquote>
+<p>站哨要幹嘛?看海阿看天空阿，不得不說風景很好風很涼</p>
+</blockquote>
+<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><blockquote>
+<p>當兵好花錢阿</p>
+</blockquote>
+<h5 id="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"><a href="#踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡" class="headerlink" title="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"></a>踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡</h5><h5 id="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"><a href="#食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴" class="headerlink" title="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"></a>食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴</h5><blockquote>
+<p>怎麼一直在領錢啊</p>
+</blockquote>
+<h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>]]></content>
+  </entry>
+  <entry>
     <title>2023 關西-東引當兵心得(關西篇)</title>
     <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%97%9C%E8%A5%BF%E7%AF%87/</url>
     <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><hr>
@@ -25,26 +64,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo GitPage初次使用</title>
-    <url>/2020/09/15/2020-09-15/</url>
-    <content><![CDATA[<h5 id="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法"><a href="#前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要-來寫一下使用方法" class="headerlink" title="前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法"></a>前幾天發現了hexo這個套件剛好最近想要做一個完整點的部落格就索性直接用了，省了不少時間精力目前用起來的感覺不錯，豐富的主題大部分需要的功能都有</p>而且最重要的是可以部屬到github上面這超重要! 來寫一下使用方法</h5><h1 id="NPM-Git"><a href="#NPM-Git" class="headerlink" title="NPM Git"></a>NPM Git</h1><h6 id="首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了"><a href="#首先要先有-npm-還有-Git，-npm-是-node-js-附帶的套件管理器沒有的話要先去-node-js-官網安裝-，Git-是版本控制系統-Hexo-會用-git-指令去抓初始化檔案-，都有了就可以執行下一步了" class="headerlink" title="首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!"></a>首先要先有 npm 還有 Git， npm 是 node.js 附帶的套件管理器沒有的話要先去 node.js 官網安裝 ，Git 是版本控制系統 Hexo 會用 git 指令去抓初始化檔案 ，都有了就可以執行下一步了!</h6><h6 id="Git-https-gitforwindows-org"><a href="#Git-https-gitforwindows-org" class="headerlink" title="Git: https://gitforwindows.org/"></a>Git: <a href="https://">https://gitforwindows.org/</a></h6><h6 id=""><a href="#" class="headerlink" title=""></a></h6><h1 id="安裝-HEXO"><a href="#安裝-HEXO" class="headerlink" title="安裝 HEXO"></a>安裝 HEXO</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<h1 id="初始化-HEXO-資料夾"><a href="#初始化-HEXO-資料夾" class="headerlink" title="初始化 HEXO 資料夾"></a>初始化 HEXO 資料夾</h1><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">init</span> &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<h6 id="做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明"><a href="#做完之後資料夾會長這樣，-config-yml-負責設定詳細可以到官網看文件，-config-yml-除了在最外層有一個-主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下-readme-md-的說明" class="headerlink" title="做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明"></a>做完之後資料夾會長這樣，_config.yml 負責設定詳細可以到官網看文件，_config.yml 除了在最外層有一個 主題資料夾也會有一個，主題內的是設定主題相關的東西各個主題都不同要看一下 readme md 的說明</h6><figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<p>再來是推薦一下好用的 vs code 擴充 vscode-md</p>
-<p>不熟悉 markdown 語法可以裝裝看 因為大部分文章格式都是用 markdown，有了這個就不用再查語法</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>GitPage</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2023 關西-東引當兵心得(韋昌嶺篇)</title>
     <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E9%9F%8B%E6%98%8C%E5%B6%BA%E7%AF%87/</url>
     <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天-床板底下文字紀錄-，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考。第二階段前往馬祖服役的弟兄都會到韋昌嶺等船開，幸運的話當天晚上就走了不幸的話就會滯留在那裏我們166梯滯留一個禮拜163梯滯留19天(床板底下文字紀錄)，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
@@ -62,29 +81,14 @@
       </tags>
   </entry>
   <entry>
-    <title>2023當兵心得-東引篇</title>
-    <url>/2023/04/22/2023%E7%95%B6%E5%85%B5%E5%BF%83%E5%BE%97-%E6%9D%B1%E5%BC%95%E7%AF%87/</url>
-    <content><![CDATA[<h4 id="今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"><a href="#今年1-x2F-12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考" class="headerlink" title="今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考"></a>今年1&#x2F;12進去當兵了因為二階段是外島的關係提前出來趁記憶還沒模糊寫個心得記錄下來，順便分享一下兩個階段的心得感想給後來人當作參考</h4><h4 id="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"><a href="#此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄" class="headerlink" title="此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄"></a>此篇為第二階段東引地區指揮部，記錄下來分享給自願或不願意即將前往外島的弟兄</h4><hr>
-<h3 id="第二階段-東引地須指揮部步兵連"><a href="#第二階段-東引地須指揮部步兵連" class="headerlink" title="第二階段-東引地須指揮部步兵連"></a>第二階段-東引地須指揮部步兵連</h3><h4 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h4><p>寢室：(核心營區)分123寢，一寢比較大人數會比較多，166梯38人1寢就睡了20幾個士官寢也在一寢還有一個大的雜物區，二寢四張四人上下舖床，三寢沒睡到原本是曬衣間後來便隔離間<br>浴廁：(核心營區)好到不能再好了，除了水壓人多會太低洗澡不好洗大多沒甚麼好挑剔的<br>食物：慘到不能再慘一餐二至四道菜，不好吃就算了還分量稀少沒得加菜</p>
-<h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><blockquote>
-<p>物資匱乏(到4月初前連網路都沒有)</p>
-</blockquote>
-<h5 id="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"><a href="#東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等" class="headerlink" title="東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等"></a>東引指揮部下面有很多連，機步、保修、一連、二連、步兵連等等，步兵連為主要新兵待的單位還是會有一些人分到如保修、二連等</h5><h5 id="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"><a href="#單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛" class="headerlink" title="單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛"></a>單純比爽度的話步兵連跟保修連二連的弟兄相比絕對不爽，166t唯一有在上課的就是步兵連更不用說伙食最爛</h5><h5 id="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"><a href="#跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯-如果能接受沒網路的話-但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了" class="headerlink" title="跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了"></a>跟前面時間比起來步兵連的一天舒服很多整體休息時間長很多，該做的做好什麼時候做甚麼事在這過的就會不錯(如果能接受沒網路的話)但是跟其他連比是沒得比的步兵連該操課要操課新訓做過的這邊還是要來一次不同的地方是65k2變成了t91。目前步兵連的生活地區分兩邊核心營區及圓圓澳，操課大部分都在圓圓澳吃飯睡覺則是在核心營區兩者之間有段距離而且地形起伏有點多走起來有點小累習慣後就還好了，在外島一個禮拜只有一天休假需要注意一下就是了</h5><h5 id="除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試"><a href="#除了這些還有這邊需要站哨-大部分時候是夜哨-，站哨前還需要考試" class="headerlink" title="除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試"></a>除了這些還有這邊需要站哨(大部分時候是夜哨)，站哨前還需要考試</h5><blockquote>
-<p>站哨要幹嘛?看海阿看天空阿，不得不說風景很好風很涼</p>
-</blockquote>
-<h4 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h4><blockquote>
-<p>當兵好花錢阿</p>
-</blockquote>
-<h5 id="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"><a href="#踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡" class="headerlink" title="踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡"></a>踏上東引看到核心營區第一個反應就是這甚麼破地方，山丘下一棟單層小破迷彩鐵皮營舍浴室廁所還在外面整個充滿陽春感跟新訓還有韋昌嶺的環境截然不同，一瞬間有點後悔為甚麼要選東引但是習慣之後就覺得其實還不錯，連上幹部人都很好相處起來都不錯生活有說有笑士官長更是陪伴了我們大部分時間，在島上當兵的日子每天都會發生一些有趣的事情也因為大家朝夕相處假日也是一起在島上不管好的壞的也都是大家一起經歷跟連上弟兄感情上會比在新訓好上許多。東引地區又分東引島跟西引島，東引地形有點像是在山上起伏很大雖然真的很小東引走直線橫穿經過村里到另一側只要十分鐘，島上主要生活地區在東引島樂華村飲料店網咖民宿吃的喝的都在這裡</h5><h5 id="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"><a href="#食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男-剛開-飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴" class="headerlink" title="食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴"></a>食物莒興雞排、臻享茶、懂飲、伊凡、第一民宿、轉角、劉家在這邊當兵都會很常吃到尤其是在步兵連因為你得自己叫食物加菜，雞排推薦莒興雞排炸雞推薦肌肉男(剛開)飲料則是臻享茶，島上只有一間小七雖說小七通常賣得比貴但是在這邊小七真的不算什麼去其他雜貨店買會貴上五塊十塊二十塊，主要常去有兩間雜貨店亨裕超市還有長宏東西有點小貴</h5><blockquote>
-<p>怎麼一直在領錢啊</p>
-</blockquote>
-<h5 id="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"><a href="#網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處" class="headerlink" title="網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處"></a>網咖的部分目前剩下一間網咖在東引叫做e網，一小時差不多40塊都是包廂設備還行整體不錯休假無聊的好去處</h5><h5 id="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"><a href="#除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜" class="headerlink" title="除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜"></a>除了網咖還能去泡在咖啡廳度過一整個下午島上有兩間咖啡廳分別是長堤還有鹹味島合作社，鹹味島點了一杯咖啡就可以坐一整天店內還有兩隻很親人的貓而且店內氣氛地點不錯蠻推薦的，長堤則是到五月才營業沒去過有點可惜</h5><h5 id="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"><a href="#西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”" class="headerlink" title="西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”"></a>西引島就沒甚麼商店印象中只有幾間民宿跟不知道有沒有開的網咖還有一間商店叫”兩洞洞”</h5><h5 id="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"><a href="#至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照" class="headerlink" title="至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照"></a>至於出去玩東引景點也就那幾個，還有阿兵哥不能釣魚也不能下水只能到處拍照</h5><h5 id="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"><a href="#站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心" class="headerlink" title="站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心"></a>站哨也是個難忘的回憶在圓圓澳站哨天氣好時就可以看到對岸，空拍機無人機不明漁船都有機會出現軍演時更是出現頻繁第一次站夜哨時看到有船靠近還真的有點小緊張，除了這個還有安全士官叫錯人被強迫起床重睡到現在還是懷恨在心</h5><h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><h5 id="這次自願來東引任何方面來看絕對是明智的選擇"><a href="#這次自願來東引任何方面來看絕對是明智的選擇" class="headerlink" title="這次自願來東引任何方面來看絕對是明智的選擇"></a>這次自願來東引任何方面來看絕對是明智的選擇</h5>]]></content>
-  </entry>
-  <entry>
-    <title>AspMvc路由至靜態Html</title>
-    <url>/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/</url>
-    <content><![CDATA[<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ActionResult <span class="title">MyHtml</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">&#123;</span></span></span><br><span class="line"><span class="params"><span class="function">     <span class="keyword">var</span> result = <span class="keyword">new</span> FilePathResult(<span class="string">$&quot;~/Views/<span class="subst">&#123;htmlPageName&#125;</span>.html&quot;</span>, <span class="string">&quot;text/html&quot;</span></span>)</span>;</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
+    <title>ASP筆記</title>
+    <url>/2023/06/16/ASP%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="紀錄使用ASP的心得"><a href="#紀錄使用ASP的心得" class="headerlink" title="紀錄使用ASP的心得"></a>紀錄使用ASP的心得</h3>]]></content>
+      <tags>
+        <tag>ASP.NET</tag>
+        <tag>ASP.NET_WebFrom</tag>
+        <tag>ASP.NET_MVC</tag>
+      </tags>
   </entry>
   <entry>
     <title>Animations30 Day2</title>
@@ -104,14 +108,32 @@
       </tags>
   </entry>
   <entry>
-    <title>ASP筆記</title>
-    <url>/2023/06/16/ASP%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="紀錄使用ASP的心得"><a href="#紀錄使用ASP的心得" class="headerlink" title="紀錄使用ASP的心得"></a>紀錄使用ASP的心得</h3>]]></content>
+    <title>Animations30 Day3</title>
+    <url>/2020/09/23/Animations30Day3/</url>
+    <content><![CDATA[<h2 id="整理一下目前我對pixi的了解"><a href="#整理一下目前我對pixi的了解" class="headerlink" title="整理一下目前我對pixi的了解"></a>整理一下目前我對pixi的了解</h2><ul>
+<li>container   (放圖形的容器可以有很多個，可以用來分組)</li>
+<li>stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台)</li>
+<li>loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理)</li>
+<li>ticker         (Application的成員 ,用來更新畫面)</li>
+<li>application (建立PIXI動畫的class，會自動產生 ticker  ,renderer ,root container)</li>
+</ul>
+<h3 id="大概的藍圖"><a href="#大概的藍圖" class="headerlink" title="大概的藍圖"></a>大概的藍圖</h3><ol>
+<li>載入緩存素材</li>
+<li>初始化</li>
+<li>ticker更新</li>
+<li>其他邏輯</li>
+</ol>
+<h2 id="研究文件"><a href="#研究文件" class="headerlink" title="研究文件"></a>研究文件</h2><p>待續</p>
+]]></content>
       <tags>
-        <tag>ASP.NET</tag>
-        <tag>ASP.NET_WebFrom</tag>
-        <tag>ASP.NET_MVC</tag>
+        <tag>pixijs</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>AspMvc路由至靜態Html</title>
+    <url>/2023/06/08/AspMvc%E8%B7%AF%E7%94%B1%E8%87%B3%E9%9D%9C%E6%85%8BHtml/</url>
+    <content><![CDATA[<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ActionResult <span class="title">MyHtml</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">&#123;</span></span></span><br><span class="line"><span class="params"><span class="function">     <span class="keyword">var</span> result = <span class="keyword">new</span> FilePathResult(<span class="string">$&quot;~/Views/<span class="subst">&#123;htmlPageName&#125;</span>.html&quot;</span>, <span class="string">&quot;text/html&quot;</span></span>)</span>;</span><br><span class="line">     <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>Asp.NET WebForm前端傳遞資料到C#</title>
@@ -145,56 +167,43 @@
       </tags>
   </entry>
   <entry>
-    <title>Animations30 Day3</title>
-    <url>/2020/09/23/Animations30Day3/</url>
-    <content><![CDATA[<h2 id="整理一下目前我對pixi的了解"><a href="#整理一下目前我對pixi的了解" class="headerlink" title="整理一下目前我對pixi的了解"></a>整理一下目前我對pixi的了解</h2><ul>
-<li>container   (放圖形的容器可以有很多個，可以用來分組)</li>
-<li>stage         (是在Application底下的成員，根畫面容器，跟他的意思一樣就是舞台)</li>
-<li>loader       (預加載器 渲染需要先把素材轉換成WebGL GPU能使用的圖片，就是紋理)</li>
-<li>ticker         (Application的成員 ,用來更新畫面)</li>
-<li>application (建立PIXI動畫的class，會自動產生 ticker  ,renderer ,root container)</li>
-</ul>
-<h3 id="大概的藍圖"><a href="#大概的藍圖" class="headerlink" title="大概的藍圖"></a>大概的藍圖</h3><ol>
-<li>載入緩存素材</li>
-<li>初始化</li>
-<li>ticker更新</li>
-<li>其他邏輯</li>
-</ol>
-<h2 id="研究文件"><a href="#研究文件" class="headerlink" title="研究文件"></a>研究文件</h2><p>待續</p>
-]]></content>
-      <tags>
-        <tag>pixijs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JsonConvert.DeserializeObject()的空字串遺失字串處理</title>
-    <url>/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/</url>
-    <content><![CDATA[<h1 id="設定-JsonSerializerSettings"><a href="#設定-JsonSerializerSettings" class="headerlink" title="設定 JsonSerializerSettings"></a>設定 JsonSerializerSettings</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> settings = <span class="keyword">new</span> JsonSerializerSettings</span><br><span class="line">     &#123;</span><br><span class="line">         NullValueHandling = NullValueHandling.Ignore,</span><br><span class="line">         MissingMemberHandling = MissingMemberHandling.Ignore</span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure>
+    <title>C#使用Post</title>
+    <url>/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/</url>
+    <content><![CDATA[<h1 id="POST-API"><a href="#POST-API" class="headerlink" title="POST API"></a>POST API</h1><pre><code>    public TResponseModel HttpPost&lt;TRequestModel, TResponseModel&gt;(string url, TRequestModel body)
+    &#123;
+        string postBody = JsonConvert.SerializeObject(body);
+
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.Method = &quot;POST&quot;;
+
+        request.ContentType = &quot;application/json&quot;;
+
+        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+
+        &#123;
+
+            streamWriter.Write(postBody);
+
+        &#125;
+
+        //發出Request
+
+        var httpResponse = (HttpWebResponse)request.GetResponse();
+
+        var streamReader = new StreamReader(httpResponse.GetResponseStream());
+
+        var result = streamReader.ReadToEnd();
+
+        TResponseModel res = JsonConvert.DeserializeObject&lt;TResponseModel&gt;(result);
+
+        return res;
+
+    &#125;
+</code></pre>
 ]]></content>
       <tags>
         <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLServer還原DB</title>
-    <url>/2023/06/13/SQLServer%E9%82%84%E5%8E%9FDB/</url>
-    <content><![CDATA[<h1 id="還原DB"><a href="#還原DB" class="headerlink" title="還原DB"></a>還原DB</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--讀取備份檔案，因為要知道到Data跟Log的名稱 這邊的N代表是Unicode</span></span><br><span class="line">RESTORE FILELISTONLY</span><br><span class="line"><span class="keyword">FROM</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line">go</span><br><span class="line"><span class="comment">--要先創建一個新資料庫還有記得切換到master，還原到正在執行時的資料庫時記得確定沒有東西在使用資料庫不然會跳錯</span></span><br><span class="line">restore database [newDB NAME]</span><br><span class="line"><span class="keyword">from</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line"><span class="keyword">WITH</span>  </span><br><span class="line">move <span class="string">&#x27;[DataFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_DataFileName.mdf_PATH]&#x27;</span>,</span><br><span class="line">move <span class="string">&#x27;[LogFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_LogFileName.ldf_PATH]&#x27;</span>,</span><br><span class="line">Replace, Recovery</span><br><span class="line">GO</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>t-sql</tag>
-        <tag>SQL</tag>
-        <tag>SQLServer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MAUI學習筆記</title>
-    <url>/2023/06/29/MAUI%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>需要使用C#開發APP</p>
-<h1 id="施工中…"><a href="#施工中…" class="headerlink" title="施工中…"></a>施工中…</h1>]]></content>
-      <tags>
-        <tag>C#</tag>
-        <tag>MAUI</tag>
-        <tag>跨平台開發</tag>
       </tags>
   </entry>
   <entry>
@@ -245,10 +254,36 @@
       </tags>
   </entry>
   <entry>
-    <title>c#去除HtmlTag</title>
-    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
-    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>JsonConvert.DeserializeObject()的空字串遺失字串處理</title>
+    <url>/2023/06/06/JsonConvert-DeserializeObject-%E7%A9%BA%E5%AD%97%E4%B8%B2%E9%81%BA%E5%A4%B1%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/</url>
+    <content><![CDATA[<h1 id="設定-JsonSerializerSettings"><a href="#設定-JsonSerializerSettings" class="headerlink" title="設定 JsonSerializerSettings"></a>設定 JsonSerializerSettings</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> settings = <span class="keyword">new</span> JsonSerializerSettings</span><br><span class="line">     &#123;</span><br><span class="line">         NullValueHandling = NullValueHandling.Ignore,</span><br><span class="line">         MissingMemberHandling = MissingMemberHandling.Ignore</span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAUI學習筆記</title>
+    <url>/2023/06/29/MAUI%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>需要使用C#開發APP</p>
+<h1 id="進度"><a href="#進度" class="headerlink" title="進度"></a>進度</h1><p>經過資料蒐集跟同事討論還有使用，這是一個不穩定的工具在github上還有大量錯誤還沒有解決，並且微軟對這項工具的態度還有社群讓我對Xamarin、MAUI非常沒有信心，因此會減少投入在這項工具的時間，如果可以希望上面能考慮使用Flutter，ReactNative等已經發展一段時間的工具甚至是直接開發原生APP，我相信都好過在不穩定且錯誤無法得到解決方法更新緩慢的工具上開發</p>
+<h1 id="施工中…"><a href="#施工中…" class="headerlink" title="施工中…"></a>施工中…</h1>]]></content>
+      <tags>
+        <tag>C#</tag>
+        <tag>MAUI</tag>
+        <tag>跨平台開發</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLServer還原DB</title>
+    <url>/2023/06/13/SQLServer%E9%82%84%E5%8E%9FDB/</url>
+    <content><![CDATA[<h1 id="還原DB"><a href="#還原DB" class="headerlink" title="還原DB"></a>還原DB</h1><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">--讀取備份檔案，因為要知道到Data跟Log的名稱 這邊的N代表是Unicode</span></span><br><span class="line">RESTORE FILELISTONLY</span><br><span class="line"><span class="keyword">FROM</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line">go</span><br><span class="line"><span class="comment">--要先創建一個新資料庫還有記得切換到master，還原到正在執行時的資料庫時記得確定沒有東西在使用資料庫不然會跳錯</span></span><br><span class="line">restore database [newDB NAME]</span><br><span class="line"><span class="keyword">from</span> DISK <span class="operator">=</span> N<span class="string">&#x27;[your.bak PATH]&#x27;</span></span><br><span class="line"><span class="keyword">WITH</span>  </span><br><span class="line">move <span class="string">&#x27;[DataFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_DataFileName.mdf_PATH]&#x27;</span>,</span><br><span class="line">move <span class="string">&#x27;[LogFileName]&#x27;</span> <span class="keyword">to</span> <span class="string">&#x27;[newDB_LogFileName.ldf_PATH]&#x27;</span>,</span><br><span class="line">Replace, Recovery</span><br><span class="line">GO</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>t-sql</tag>
+        <tag>SQL</tag>
+        <tag>SQLServer</tag>
+      </tags>
   </entry>
   <entry>
     <title>SQL優化</title>
@@ -271,6 +306,63 @@
       <tags>
         <tag>SQlServer</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>VisualStudio好用快捷鍵</title>
+    <url>/2023/06/30/VisualStudio%E5%A5%BD%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%8D%B5/</url>
+    <content><![CDATA[<h1 id="提取方法重構"><a href="#提取方法重構" class="headerlink" title="提取方法重構"></a>提取方法重構</h1><p><strong>功能:</strong> 將程式片段轉為方法</p>
+<p><strong>快捷鍵:</strong> “Ctrl+R”+“Ctrl+M”</p>
+]]></content>
+      <tags>
+        <tag>VisualStudio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WorldEditor常用技巧 1</title>
+    <url>/2023/06/13/WorldEditor-%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7-1/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。"><a href="#WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。" class="headerlink" title="WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。"></a>WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。</h2><h3 id="會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。"><a href="#會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。" class="headerlink" title="會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。"></a>會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。</h3><h1 id="自訂資料"><a href="#自訂資料" class="headerlink" title="自訂資料"></a>自訂資料</h1><h3 id="在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代"><a href="#在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代" class="headerlink" title="在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代"></a>在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代</h3><h1 id="假人-dummy、馬甲"><a href="#假人-dummy、馬甲" class="headerlink" title="假人(dummy、馬甲)"></a>假人(dummy、馬甲)</h1><h3 id="假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定"><a href="#假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定" class="headerlink" title="假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定"></a>假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定</h3><h4 id="普通技能"><a href="#普通技能" class="headerlink" title="普通技能"></a><strong>普通技能</strong></h4><ul>
+<li>中立無敵</li>
+<li>蝗蟲</li>
+<li>隱形</li>
+</ul>
+<h4 id="其他設定"><a href="#其他設定" class="headerlink" title="其他設定"></a>其他設定</h4><ul>
+<li>移動速度: 0</li>
+<li>移動:無</li>
+<li>碰撞體積: 0</li>
+<li>視野: 0</li>
+<li>攻擊: 無</li>
+<li>不可逃跑</li>
+<li>生命回復: -1</li>
+</ul>
+<h3 id="實際應用-自訂義投射物"><a href="#實際應用-自訂義投射物" class="headerlink" title="實際應用 自訂義投射物"></a>實際應用 自訂義投射物</h3><h4 id="以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動"><a href="#以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動" class="headerlink" title="以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動"></a>以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動</h4><h3 id="創建單位"><a href="#創建單位" class="headerlink" title="創建單位"></a>創建單位</h3><h4 id="CreateMissilesLoc-投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效-回傳-單位"><a href="#CreateMissilesLoc-投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效-回傳-單位" class="headerlink" title="CreateMissilesLoc(投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效) 回傳 單位"></a>CreateMissilesLoc(投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效) 回傳 單位</h4><h4 id="這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下"><a href="#這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下" class="headerlink" title="這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下"></a>這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下</h4><ol>
+<li>AngleBetweenPoints(startLoc, endLoc): 內建的功能函數，會計算兩個點之間的角度回傳是一個180到-180的real數字</li>
+<li>CreateUnitAtLoc(player, UnitType, location , faceAngle ):在目標點創造單位，一定會用到的函數至於跟他長得差不多的親戚有什麼不同之後再介紹</li>
+<li>PauseUnit(unit, true):暫停單位</li>
+<li>UnitAddAbilityBJ( interger ablitedID, unit): 單位添加技能，這邊的重點在’Arav’這是翔風德魯伊變形成烏鴉型態的技能ID，添加這個技能再移除可以讓單位改變飛行高度，是一個BUG但是非常有用也就沒改了</li>
+<li>SaveUnitHandle、SaveInterger … :都是儲存值到HashTable</li>
+<li>GroupAddUnit(group , unit):　添加單位到單位組</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//==============================================================================</span><br><span class="line">//指向導彈</span><br><span class="line">function CreateMissilesLoc takes player p, unit attacker, integer UnitType, real speed, real radius, location start, location end , real earc , real damage, attacktype type1 , damagetype type2 , string targetLocEffect returns unit</span><br><span class="line"></span><br><span class="line">  local real angle = AngleBetweenPoints(start, end)</span><br><span class="line">  local unit vest = CreateUnitAtLoc(p, UnitType, start , angle )</span><br><span class="line">  local integer handleId = GetHandleId(vest)</span><br><span class="line"></span><br><span class="line">  call PauseUnit(vest, true)</span><br><span class="line">  call SetUnitPathing( vest, false )</span><br><span class="line">  call UnitAddAbilityBJ( &#x27;Arav&#x27;, vest)</span><br><span class="line">  call UnitRemoveAbilityBJ( &#x27;Arav&#x27;, vest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  //----------------------------------------------------------</span><br><span class="line">  call SaveUnitHandle(Missiles_loc_table, handleId, 0, vest)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 1, damage)</span><br><span class="line">  call SaveLocationHandle(Missiles_loc_table, handleId, 2, end)</span><br><span class="line">  call SaveUnitHandle(Missiles_loc_table, handleId, 3, attacker)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 4, earc)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 5, radius)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 6, speed)</span><br><span class="line">  call SaveStr(Missiles_loc_table, handleId, 7, targetLocEffect)</span><br><span class="line">  call SaveLocationHandle(Missiles_loc_table, handleId, 8, start)</span><br><span class="line"></span><br><span class="line">  call GroupAddUnit(Missiles_Unit_Group, vest)</span><br><span class="line"> </span><br><span class="line">  return vest</span><br><span class="line">endfunction</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="移動還有命中"><a href="#移動還有命中" class="headerlink" title="移動還有命中"></a>移動還有命中</h3><h4 id="這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下"><a href="#這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下" class="headerlink" title="這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下"></a>這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下</h4><ol>
+<li>ForGroup(group, function functionHandle):GUI裡面對組做動作實際上在Jass中就是長這樣，會需要一個函數(function)去對組中的物件做操作，因為無法傳遞參數在操作函數中只能讀取到觸發器中事件響應物件，這造成一些資料讀取的困難但使用一些技巧還是可以克服的，這邊就使用unithandle將資料都存取在hashtable中，ForGroup時可以獲得unithandle讀取到我們想要的資料</li>
+<li>DistanceBetweenPoints(loc1,loc2): 兩點間的距離，返回一個real</li>
+<li>PolarProjectionBJ(loc, distance, angle): 極座標點位移，實用而且常用的函數，將點朝一個角度位移你要的距離</li>
+</ol>
+<h4 id="整段做的動作是每0-05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現"><a href="#整段做的動作是每0-05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現" class="headerlink" title="整段做的動作是每0.05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現"></a>整段做的動作是每0.05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function MissilesLoc_add_group takes nothing returns nothing</span><br><span class="line">  local integer handleId = GetHandleId(Missiles_OnHitUnit)</span><br><span class="line">  local unit u = GetEnumUnit()</span><br><span class="line">  local unit attacker = LoadUnitHandle(Missiles_loc_table, handleId, 3)</span><br><span class="line">  local integer target_handleId = GetHandleId(u)</span><br><span class="line"></span><br><span class="line">  local real dmg = LoadReal(Missiles_loc_table, handleId, 1)</span><br><span class="line"></span><br><span class="line">  call GroupAddUnit(Missiles_Damage_Group, u)</span><br><span class="line">  call SaveUnitHandle(Missiles_Damage_table, target_handleId, 0, attacker)</span><br><span class="line">  call SaveReal(Missiles_Damage_table, target_handleId, 1, dmg)</span><br><span class="line">  </span><br><span class="line">  set u = null</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function MissilesLoc_ForGroup takes nothing returns nothing</span><br><span class="line">  local unit u = GetEnumUnit()</span><br><span class="line">  local integer handleId = GetHandleId(u)</span><br><span class="line">  local location target = LoadLocationHandle(Missiles_loc_table, handleId, 2)</span><br><span class="line">  local location loc = GetUnitLoc(u)</span><br><span class="line">  local location startLoc = MissilesGetStartLoc(handleId)</span><br><span class="line">  local real angle = AngleBetweenPoints(loc, target)</span><br><span class="line">  local real distance = DistanceBetweenPoints(loc, target)</span><br><span class="line">  local real x = GetLocationX(loc)</span><br><span class="line">  local real y = GetLocationY(loc)</span><br><span class="line">  local real erac = LoadReal(Missiles_loc_table, handleId, 4)</span><br><span class="line">  local real radius = LoadReal(Missiles_loc_table, handleId, 5)</span><br><span class="line">  local real speed = LoadReal(Missiles_loc_table, handleId, 6)</span><br><span class="line"></span><br><span class="line">  local string effectName = LoadStr(Missiles_loc_table, handleId, 7)</span><br><span class="line">  //</span><br><span class="line">  local location nextLoc = PolarProjectionBJ(loc, speed / 20, angle)</span><br><span class="line"></span><br><span class="line">  local real hight = util_GetParabolaHeight(u, startLoc , target, erac)</span><br><span class="line">  local group g = null</span><br><span class="line"></span><br><span class="line">  local effect e = null</span><br><span class="line">  if IsUnitDeadBJ(u) == true then </span><br><span class="line">    call FlushChildHashtable(Missiles_loc_table, handleId)</span><br><span class="line">    call GroupRemoveUnit(Missiles_Unit_Group, u)</span><br><span class="line">    call RemoveLocation(target)</span><br><span class="line">  endif</span><br><span class="line">  if IsUnitInRangeLoc(u, target, 80) then</span><br><span class="line">    set g = GetUnitsInRangeOfLocMatching(radius, loc, Condition(function util_isEnemyfilter ))</span><br><span class="line">    set e = AddSpecialEffectLoc( effectName, loc)</span><br><span class="line">  </span><br><span class="line">    set Missiles_OnHitUnit = u</span><br><span class="line">    call ForGroup(g, function MissilesLoc_add_group )</span><br><span class="line"></span><br><span class="line">    //---------------------------------------------------------</span><br><span class="line">    call DestroyEffect(e)</span><br><span class="line">    call KillUnit(u)</span><br><span class="line">  else</span><br><span class="line">    call SetUnitPositionLocFacingBJ( u, nextLoc , bj_UNIT_FACING )</span><br><span class="line">  endif</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  call SetUnitPositionLocFacingBJ( u, nextLoc , bj_UNIT_FACING )</span><br><span class="line">  call SetUnitFlyHeight(u, hight  , 99999)</span><br><span class="line">  //=====================================================================</span><br><span class="line">  call RemoveLocation(loc)</span><br><span class="line">  call RemoveLocation(nextLoc)</span><br><span class="line">  call DestroyGroup(g)</span><br><span class="line">  set loc = null</span><br><span class="line">  set nextLoc = null</span><br><span class="line">  set g = null</span><br><span class="line">  set e = null</span><br><span class="line">  set u = null</span><br><span class="line">endfunction</span><br><span class="line">function Trig_MissilesLocActionActions takes nothing returns nothing</span><br><span class="line"> </span><br><span class="line">  call ForGroup(Missiles_Unit_Group, function MissilesLoc_ForGroup )</span><br><span class="line"></span><br><span class="line">endfunction </span><br><span class="line"></span><br><span class="line">//===========================================================================</span><br><span class="line">function InitTrig_MissilesLocAction takes nothing returns nothing</span><br><span class="line">  set gg_trg_MissilesLocAction = CreateTrigger()</span><br><span class="line"></span><br><span class="line">  call TriggerRegisterTimerEventPeriodic( gg_trg_MissilesLocAction, 0.05 )</span><br><span class="line">  call TriggerAddAction(gg_trg_MissilesLocAction, function Trig_MissilesLocActionActions)</span><br><span class="line">endfunction</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>WE</tag>
+        <tag>JASS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>c#去除HtmlTag</title>
+    <url>/2023/05/26/c-%E5%8E%BB%E9%99%A4HtmlTag/</url>
+    <content><![CDATA[<h1 id="使用正則表達式-RegularExpression"><a href="#使用正則表達式-RegularExpression" class="headerlink" title="使用正則表達式 RegularExpression"></a>使用正則表達式 RegularExpression</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">StripHTML</span>(<span class="params"><span class="built_in">string</span> input</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> Regex.Replace(input, <span class="string">&quot;&lt;[a-zA-Z/].*?&gt;&quot;</span>, String.Empty);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>Animation30 Day1</title>
@@ -317,47 +409,6 @@
       <tags>
         <tag>react</tag>
         <tag>firebase</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WorldEditor常用技巧 1</title>
-    <url>/2023/06/13/WorldEditor-%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7-1/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。"><a href="#WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。" class="headerlink" title="WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。"></a>WorldEditor是魔獸爭霸自帶的地圖編輯器，其功能強大讓魔獸爭霸這款有二十年歷史的遊戲依然活耀。</h2><h3 id="會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。"><a href="#會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。" class="headerlink" title="會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。"></a>會寫這篇是因為中文參考資源日漸稀少，魔獸爭霸中文圈生態近年也是改變很多，中文玩家以及作者、翻譯者都流向中國大型平台，平台支援的各種API也讓地圖不像以前一樣流通，一般版本的編輯器資訊也就變得很稀少並且破碎讓新手難以入門，在這邊整理一些常見的技巧做個紀錄也供大家參考。</h3><h1 id="自訂資料"><a href="#自訂資料" class="headerlink" title="自訂資料"></a>自訂資料</h1><h3 id="在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代"><a href="#在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代" class="headerlink" title="在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代"></a>在單位編輯器中有一個欄位是自訂義資料，可以在裡面放一些數據在編輯器中讀取，可以用hashtable取代</h3><h1 id="假人-dummy、馬甲"><a href="#假人-dummy、馬甲" class="headerlink" title="假人(dummy、馬甲)"></a>假人(dummy、馬甲)</h1><h3 id="假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定"><a href="#假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定" class="headerlink" title="假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定"></a>假人是非常廣泛用到的一種技巧，比如單位重生、自訂義投射物模型、多重施法、科技檢測等都會用到，他本身就只是一個普通單位通常會用苦工當模板並且使用以下設定</h3><h4 id="普通技能"><a href="#普通技能" class="headerlink" title="普通技能"></a><strong>普通技能</strong></h4><ul>
-<li>中立無敵</li>
-<li>蝗蟲</li>
-<li>隱形</li>
-</ul>
-<h4 id="其他設定"><a href="#其他設定" class="headerlink" title="其他設定"></a>其他設定</h4><ul>
-<li>移動速度: 0</li>
-<li>移動:無</li>
-<li>碰撞體積: 0</li>
-<li>視野: 0</li>
-<li>攻擊: 無</li>
-<li>不可逃跑</li>
-<li>生命回復: -1</li>
-</ul>
-<h3 id="實際應用-自訂義投射物"><a href="#實際應用-自訂義投射物" class="headerlink" title="實際應用 自訂義投射物"></a>實際應用 自訂義投射物</h3><h4 id="以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動"><a href="#以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動" class="headerlink" title="以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動"></a>以下來源是我自己做地圖時寫出來的通用系統全使用Jass，只要設定好都是可以用的，不懂Jass的小夥伴不用擔心之後會寫一篇簡易的入門文章，以下會分兩個觸發器工作分別是設定創建投射物單位、以及讓他往目標移動</h4><h3 id="創建單位"><a href="#創建單位" class="headerlink" title="創建單位"></a>創建單位</h3><h4 id="CreateMissilesLoc-投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效-回傳-單位"><a href="#CreateMissilesLoc-投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效-回傳-單位" class="headerlink" title="CreateMissilesLoc(投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效) 回傳 單位"></a>CreateMissilesLoc(投射物擁有玩家、假人單位類型ID、速度、傷害範圍、開始位置、目標位置、拋物線參數、傷害、攻擊類型、傷害類型、目標特效) 回傳 單位</h4><h4 id="這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下"><a href="#這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下" class="headerlink" title="這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下"></a>這邊的工作很簡單，計算兩點角度還有創造假人然後暫停單位，暫停單位很重要你也不希望單位做出一些你不希望他做的事情，然後關閉移動路徑讓單位移動無視地形，添加德魯伊的變化技能之後移除，整理還有詳細說明一下</h4><ol>
-<li>AngleBetweenPoints(startLoc, endLoc): 內建的功能函數，會計算兩個點之間的角度回傳是一個180到-180的real數字</li>
-<li>CreateUnitAtLoc(player, UnitType, location , faceAngle ):在目標點創造單位，一定會用到的函數至於跟他長得差不多的親戚有什麼不同之後再介紹</li>
-<li>PauseUnit(unit, true):暫停單位</li>
-<li>UnitAddAbilityBJ( interger ablitedID, unit): 單位添加技能，這邊的重點在’Arav’這是翔風德魯伊變形成烏鴉型態的技能ID，添加這個技能再移除可以讓單位改變飛行高度，是一個BUG但是非常有用也就沒改了</li>
-<li>SaveUnitHandle、SaveInterger … :都是儲存值到HashTable</li>
-<li>GroupAddUnit(group , unit):　添加單位到單位組</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//==============================================================================</span><br><span class="line">//指向導彈</span><br><span class="line">function CreateMissilesLoc takes player p, unit attacker, integer UnitType, real speed, real radius, location start, location end , real earc , real damage, attacktype type1 , damagetype type2 , string targetLocEffect returns unit</span><br><span class="line"></span><br><span class="line">  local real angle = AngleBetweenPoints(start, end)</span><br><span class="line">  local unit vest = CreateUnitAtLoc(p, UnitType, start , angle )</span><br><span class="line">  local integer handleId = GetHandleId(vest)</span><br><span class="line"></span><br><span class="line">  call PauseUnit(vest, true)</span><br><span class="line">  call SetUnitPathing( vest, false )</span><br><span class="line">  call UnitAddAbilityBJ( &#x27;Arav&#x27;, vest)</span><br><span class="line">  call UnitRemoveAbilityBJ( &#x27;Arav&#x27;, vest)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  //----------------------------------------------------------</span><br><span class="line">  call SaveUnitHandle(Missiles_loc_table, handleId, 0, vest)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 1, damage)</span><br><span class="line">  call SaveLocationHandle(Missiles_loc_table, handleId, 2, end)</span><br><span class="line">  call SaveUnitHandle(Missiles_loc_table, handleId, 3, attacker)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 4, earc)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 5, radius)</span><br><span class="line">  call SaveReal(Missiles_loc_table, handleId, 6, speed)</span><br><span class="line">  call SaveStr(Missiles_loc_table, handleId, 7, targetLocEffect)</span><br><span class="line">  call SaveLocationHandle(Missiles_loc_table, handleId, 8, start)</span><br><span class="line"></span><br><span class="line">  call GroupAddUnit(Missiles_Unit_Group, vest)</span><br><span class="line"> </span><br><span class="line">  return vest</span><br><span class="line">endfunction</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="移動還有命中"><a href="#移動還有命中" class="headerlink" title="移動還有命中"></a>移動還有命中</h3><h4 id="這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下"><a href="#這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下" class="headerlink" title="這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下"></a>這邊看起來很複雜實際上他只有做一個ForGroup跟投射物到目標後的後續動作，詳細說明一下</h4><ol>
-<li>ForGroup(group, function functionHandle):GUI裡面對組做動作實際上在Jass中就是長這樣，會需要一個函數(function)去對組中的物件做操作，因為無法傳遞參數在操作函數中只能讀取到觸發器中事件響應物件，這造成一些資料讀取的困難但使用一些技巧還是可以克服的，這邊就使用unithandle將資料都存取在hashtable中，ForGroup時可以獲得unithandle讀取到我們想要的資料</li>
-<li>DistanceBetweenPoints(loc1,loc2): 兩點間的距離，返回一個real</li>
-<li>PolarProjectionBJ(loc, distance, angle): 極座標點位移，實用而且常用的函數，將點朝一個角度位移你要的距離</li>
-</ol>
-<h4 id="整段做的動作是每0-05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現"><a href="#整段做的動作是每0-05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現" class="headerlink" title="整段做的動作是每0.05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現"></a>整段做的動作是每0.05秒將投射物單位朝目標點位移，期間計算拋物線高度到目標點後殺死目標並且加入到單位組中實現後續對範圍內目標傷害的機制，這整個系統難點都是資料不好傳遞內建的傷害範圍目標是不分敵我所以無法使用，必須用這種方式來實現</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function MissilesLoc_add_group takes nothing returns nothing</span><br><span class="line">  local integer handleId = GetHandleId(Missiles_OnHitUnit)</span><br><span class="line">  local unit u = GetEnumUnit()</span><br><span class="line">  local unit attacker = LoadUnitHandle(Missiles_loc_table, handleId, 3)</span><br><span class="line">  local integer target_handleId = GetHandleId(u)</span><br><span class="line"></span><br><span class="line">  local real dmg = LoadReal(Missiles_loc_table, handleId, 1)</span><br><span class="line"></span><br><span class="line">  call GroupAddUnit(Missiles_Damage_Group, u)</span><br><span class="line">  call SaveUnitHandle(Missiles_Damage_table, target_handleId, 0, attacker)</span><br><span class="line">  call SaveReal(Missiles_Damage_table, target_handleId, 1, dmg)</span><br><span class="line">  </span><br><span class="line">  set u = null</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function MissilesLoc_ForGroup takes nothing returns nothing</span><br><span class="line">  local unit u = GetEnumUnit()</span><br><span class="line">  local integer handleId = GetHandleId(u)</span><br><span class="line">  local location target = LoadLocationHandle(Missiles_loc_table, handleId, 2)</span><br><span class="line">  local location loc = GetUnitLoc(u)</span><br><span class="line">  local location startLoc = MissilesGetStartLoc(handleId)</span><br><span class="line">  local real angle = AngleBetweenPoints(loc, target)</span><br><span class="line">  local real distance = DistanceBetweenPoints(loc, target)</span><br><span class="line">  local real x = GetLocationX(loc)</span><br><span class="line">  local real y = GetLocationY(loc)</span><br><span class="line">  local real erac = LoadReal(Missiles_loc_table, handleId, 4)</span><br><span class="line">  local real radius = LoadReal(Missiles_loc_table, handleId, 5)</span><br><span class="line">  local real speed = LoadReal(Missiles_loc_table, handleId, 6)</span><br><span class="line"></span><br><span class="line">  local string effectName = LoadStr(Missiles_loc_table, handleId, 7)</span><br><span class="line">  //</span><br><span class="line">  local location nextLoc = PolarProjectionBJ(loc, speed / 20, angle)</span><br><span class="line"></span><br><span class="line">  local real hight = util_GetParabolaHeight(u, startLoc , target, erac)</span><br><span class="line">  local group g = null</span><br><span class="line"></span><br><span class="line">  local effect e = null</span><br><span class="line">  if IsUnitDeadBJ(u) == true then </span><br><span class="line">    call FlushChildHashtable(Missiles_loc_table, handleId)</span><br><span class="line">    call GroupRemoveUnit(Missiles_Unit_Group, u)</span><br><span class="line">    call RemoveLocation(target)</span><br><span class="line">  endif</span><br><span class="line">  if IsUnitInRangeLoc(u, target, 80) then</span><br><span class="line">    set g = GetUnitsInRangeOfLocMatching(radius, loc, Condition(function util_isEnemyfilter ))</span><br><span class="line">    set e = AddSpecialEffectLoc( effectName, loc)</span><br><span class="line">  </span><br><span class="line">    set Missiles_OnHitUnit = u</span><br><span class="line">    call ForGroup(g, function MissilesLoc_add_group )</span><br><span class="line"></span><br><span class="line">    //---------------------------------------------------------</span><br><span class="line">    call DestroyEffect(e)</span><br><span class="line">    call KillUnit(u)</span><br><span class="line">  else</span><br><span class="line">    call SetUnitPositionLocFacingBJ( u, nextLoc , bj_UNIT_FACING )</span><br><span class="line">  endif</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  call SetUnitPositionLocFacingBJ( u, nextLoc , bj_UNIT_FACING )</span><br><span class="line">  call SetUnitFlyHeight(u, hight  , 99999)</span><br><span class="line">  //=====================================================================</span><br><span class="line">  call RemoveLocation(loc)</span><br><span class="line">  call RemoveLocation(nextLoc)</span><br><span class="line">  call DestroyGroup(g)</span><br><span class="line">  set loc = null</span><br><span class="line">  set nextLoc = null</span><br><span class="line">  set g = null</span><br><span class="line">  set e = null</span><br><span class="line">  set u = null</span><br><span class="line">endfunction</span><br><span class="line">function Trig_MissilesLocActionActions takes nothing returns nothing</span><br><span class="line"> </span><br><span class="line">  call ForGroup(Missiles_Unit_Group, function MissilesLoc_ForGroup )</span><br><span class="line"></span><br><span class="line">endfunction </span><br><span class="line"></span><br><span class="line">//===========================================================================</span><br><span class="line">function InitTrig_MissilesLocAction takes nothing returns nothing</span><br><span class="line">  set gg_trg_MissilesLocAction = CreateTrigger()</span><br><span class="line"></span><br><span class="line">  call TriggerRegisterTimerEventPeriodic( gg_trg_MissilesLocAction, 0.05 )</span><br><span class="line">  call TriggerAddAction(gg_trg_MissilesLocAction, function Trig_MissilesLocActionActions)</span><br><span class="line">endfunction</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>WE</tag>
-        <tag>JASS</tag>
       </tags>
   </entry>
   <entry>
@@ -446,55 +497,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C#使用Post</title>
-    <url>/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/</url>
-    <content><![CDATA[<h1 id="POST-API"><a href="#POST-API" class="headerlink" title="POST API"></a>POST API</h1><pre><code>    public TResponseModel HttpPost&lt;TRequestModel, TResponseModel&gt;(string url, TRequestModel body)
-    &#123;
-        string postBody = JsonConvert.SerializeObject(body);
-
-        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-
-        request.Method = &quot;POST&quot;;
-
-        request.ContentType = &quot;application/json&quot;;
-
-        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
-
-        &#123;
-
-            streamWriter.Write(postBody);
-
-        &#125;
-
-        //發出Request
-
-        var httpResponse = (HttpWebResponse)request.GetResponse();
-
-        var streamReader = new StreamReader(httpResponse.GetResponseStream());
-
-        var result = streamReader.ReadToEnd();
-
-        TResponseModel res = JsonConvert.DeserializeObject&lt;TResponseModel&gt;(result);
-
-        return res;
-
-    &#125;
-</code></pre>
-]]></content>
-      <tags>
-        <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>測量程式碼區塊執行時間</title>
-    <url>/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</url>
-    <content><![CDATA[<h1 id="使用-System-Diagnostics"><a href="#使用-System-Diagnostics" class="headerlink" title="使用 System.Diagnostics"></a>使用 System.Diagnostics</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line">Stopwatch stopWatch = Stopwatch.StartNew();</span><br><span class="line"><span class="comment">/*要測試的區塊放這*/</span></span><br><span class="line">stopWatch.Stop();</span><br><span class="line">Trace.WriteLine(<span class="string">&quot;使用時間: &quot;</span>+ stopWatch.ElapsedMilliseconds);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>xamarin學習筆記</title>
     <url>/2023/06/17/xamarin%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="因應公司有項目要使用-Xamarin-開發要做準備"><a href="#因應公司有項目要使用-Xamarin-開發要做準備" class="headerlink" title="因應公司有項目要使用 Xamarin 開發要做準備"></a>因應公司有項目要使用 Xamarin 開發要做準備</h3><h1 id="Xamarin-根元素屬性"><a href="#Xamarin-根元素屬性" class="headerlink" title="Xamarin 根元素屬性"></a>Xamarin 根元素屬性</h1><h2 id="命名空間-xmlns"><a href="#命名空間-xmlns" class="headerlink" title="命名空間 xmlns"></a>命名空間 xmlns</h2><h3 id="根據官方文件說明"><a href="#根據官方文件說明" class="headerlink" title="根據官方文件說明"></a>根據官方文件說明</h3><blockquote>
@@ -549,6 +551,15 @@
         <tag>C#</tag>
         <tag>xamarin</tag>
         <tag>.Net</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>測量程式碼區塊執行時間</title>
+    <url>/2023/05/29/%E6%B8%AC%E9%87%8F%E7%A8%8B%E5%BC%8F%E7%A2%BC%E5%8D%80%E5%A1%8A%E5%9F%B7%E8%A1%8C%E6%99%82%E9%96%93/</url>
+    <content><![CDATA[<h1 id="使用-System-Diagnostics"><a href="#使用-System-Diagnostics" class="headerlink" title="使用 System.Diagnostics"></a>使用 System.Diagnostics</h1><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line">Stopwatch stopWatch = Stopwatch.StartNew();</span><br><span class="line"><span class="comment">/*要測試的區塊放這*/</span></span><br><span class="line">stopWatch.Stop();</span><br><span class="line">Trace.WriteLine(<span class="string">&quot;使用時間: &quot;</span>+ stopWatch.ElapsedMilliseconds);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>C#</tag>
       </tags>
   </entry>
 </search>
