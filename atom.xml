@@ -6,7 +6,7 @@
   <link href="https://williamlin062.github.io/atom.xml" rel="self"/>
   
   <link href="https://williamlin062.github.io/"/>
-  <updated>2023-06-30T06:11:12.163Z</updated>
+  <updated>2023-06-30T07:11:02.981Z</updated>
   <id>https://williamlin062.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode 189</title>
+    <link href="https://williamlin062.github.io/2023/06/30/leetcode-189/"/>
+    <id>https://williamlin062.github.io/2023/06/30/leetcode-189/</id>
+    <published>2023-06-30T07:10:32.000Z</published>
+    <updated>2023-06-30T07:11:02.981Z</updated>
+    
+    
+    
+    
+    
+    <category term="LeetCode" scheme="https://williamlin062.github.io/tags/LeetCode/"/>
+    
+  </entry>
   
   <entry>
     <title>VisualStudio好用快捷鍵</title>
@@ -464,28 +479,6 @@
     
     
     <category term="Asp.NET" scheme="https://williamlin062.github.io/tags/Asp-NET/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C#使用Post</title>
-    <link href="https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/"/>
-    <id>https://williamlin062.github.io/2023/05/23/C-%E4%BD%BF%E7%94%A8Post/</id>
-    <published>2023-05-23T06:23:58.000Z</published>
-    <updated>2023-06-08T09:26:46.429Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="POST-API"><a href="#POST-API" class="headerlink" title="POST API"></a>POST API</h1><pre><code>    public TResponseModel HttpPost&lt;TRequestModel, TResponseModel&gt;(string url, TRequestModel body)    &#123;        string postBody = JsonConvert.SerializeObject(body);        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);        request.Method = &quot;POST&quot;;        request.ContentType = &quot;application/json&quot;;        using (var streamWriter = new StreamWriter(request.GetRequestStream()))        &#123;            streamWriter.Write(postBody);        &#125;        //發出Request        var httpResponse = (HttpWebResponse)request.GetResponse();        var streamReader = new StreamReader(httpResponse.GetResponseStream());        var result = streamReader.ReadToEnd();        TResponseModel res = JsonConvert.DeserializeObject&lt;TResponseModel&gt;(result);        return res;    &#125;</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;POST-API&quot;&gt;&lt;a href=&quot;#POST-API&quot; class=&quot;headerlink&quot; title=&quot;POST API&quot;&gt;&lt;/a&gt;POST API&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;    public TResponseModel HttpPost&amp;lt;</summary>
-      
-    
-    
-    
-    
-    <category term="C#" scheme="https://williamlin062.github.io/tags/C/"/>
     
   </entry>
   

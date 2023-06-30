@@ -412,6 +412,14 @@
       </tags>
   </entry>
   <entry>
+    <title>LeetCode 189</title>
+    <url>/2023/06/30/leetcode-189/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode_26 RemoveDuplicates</title>
     <url>/2023/06/29/leetcode-26/</url>
     <content><![CDATA[<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Solution</span> &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="built_in">int</span> <span class="title">RemoveDuplicates</span>(<span class="params"><span class="built_in">int</span>[] nums</span>)</span> &#123;</span><br><span class="line">            <span class="built_in">int</span> uniqueCount =  nums.Distinct().Count(); <span class="comment">//不重複數量</span></span><br><span class="line">            <span class="built_in">int</span>[] uniqueNumbers = <span class="keyword">new</span> <span class="built_in">int</span>[uniqueCount]; <span class="comment">//建立陣列裝不重複數字</span></span><br><span class="line">            Array.Copy( nums.Distinct().ToArray(), uniqueNumbers, uniqueCount);</span><br><span class="line">            <span class="comment">//複製nums的不重複元素至剛剛建立的陣列</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; uniqueNumbers.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                nums[i] = uniqueNumbers[i];<span class="comment">//取代</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> uniqueCount;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -476,27 +484,6 @@
       </tags>
   </entry>
   <entry>
-    <title>如何該改dbml連線字串</title>
-    <url>/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/</url>
-    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連線字串</p>
-<p>但是這兩種方法在把dbml放在單獨的組件中時不起作用，每次重建時都會重製回更改前也無法拖曳資料表到dbml中，於是仔細研究Visual Studio究竟是去哪抓連線字串還有事怎麼新增連線字串的</p>
-<h1 id="更改方法"><a href="#更改方法" class="headerlink" title="更改方法"></a>更改方法</h1><p>Visual Studio將連線字串放置在組件中Properties底下的Settings.settings中</p>
-<p>如要更改連線字串首先打開Settings.settings會出現表格文件</p>
-<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlChangeConnection.png" class="">
-
-<p>這個文件可以添加應用程式屬性和其他資訊，點選最下方欄位或又見可以新增設定</p>
-<p>類型選擇連接字串，若是有其他已經在使用的連接字串請更改使用中的連接字串，VS只會只用當前連接字串會忽視後來新增的，除非有檢測到當前資料表跟資料來源不同才會切換。</p>
-<p>點選 ‘值’欄位最後方會出現編輯選項按鈕點開會出現連接屬性</p>
-<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlSetting.png" class="">
-
-<p>填寫完資料庫伺服器資訊後測試連接成功案確定即可新增&#x2F;該改連接字串。</p>
-<p>修改完後記得重建組件重啟應用程式</p>
-]]></content>
-      <tags>
-        <tag>Asp.Net</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>xamarin學習筆記</title>
     <url>/2023/06/17/xamarin%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><h3 id="因應公司有項目要使用-Xamarin-開發要做準備"><a href="#因應公司有項目要使用-Xamarin-開發要做準備" class="headerlink" title="因應公司有項目要使用 Xamarin 開發要做準備"></a>因應公司有項目要使用 Xamarin 開發要做準備</h3><h1 id="Xamarin-根元素屬性"><a href="#Xamarin-根元素屬性" class="headerlink" title="Xamarin 根元素屬性"></a>Xamarin 根元素屬性</h1><h2 id="命名空間-xmlns"><a href="#命名空間-xmlns" class="headerlink" title="命名空間 xmlns"></a>命名空間 xmlns</h2><h3 id="根據官方文件說明"><a href="#根據官方文件說明" class="headerlink" title="根據官方文件說明"></a>根據官方文件說明</h3><blockquote>
@@ -551,6 +538,27 @@
         <tag>C#</tag>
         <tag>xamarin</tag>
         <tag>.Net</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何該改dbml連線字串</title>
+    <url>/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/</url>
+    <content><![CDATA[<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><p>之前更改dbml的連線字串都是先新增連接到資料庫在拖曳資料表進設計檔中，讓vs自動該改連線字串到新的資料庫，或者更改app.config的連線字串</p>
+<p>但是這兩種方法在把dbml放在單獨的組件中時不起作用，每次重建時都會重製回更改前也無法拖曳資料表到dbml中，於是仔細研究Visual Studio究竟是去哪抓連線字串還有事怎麼新增連線字串的</p>
+<h1 id="更改方法"><a href="#更改方法" class="headerlink" title="更改方法"></a>更改方法</h1><p>Visual Studio將連線字串放置在組件中Properties底下的Settings.settings中</p>
+<p>如要更改連線字串首先打開Settings.settings會出現表格文件</p>
+<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlChangeConnection.png" class="">
+
+<p>這個文件可以添加應用程式屬性和其他資訊，點選最下方欄位或又見可以新增設定</p>
+<p>類型選擇連接字串，若是有其他已經在使用的連接字串請更改使用中的連接字串，VS只會只用當前連接字串會忽視後來新增的，除非有檢測到當前資料表跟資料來源不同才會切換。</p>
+<p>點選 ‘值’欄位最後方會出現編輯選項按鈕點開會出現連接屬性</p>
+<img src="/2023/06/29/%E5%A6%82%E4%BD%95%E8%A9%B2%E6%94%B9dbml%E9%80%A3%E7%B7%9A%E5%AD%97%E4%B8%B2/dbmlSetting.png" class="">
+
+<p>填寫完資料庫伺服器資訊後測試連接成功案確定即可新增&#x2F;該改連接字串。</p>
+<p>修改完後記得重建組件重啟應用程式</p>
+]]></content>
+      <tags>
+        <tag>Asp.Net</tag>
       </tags>
   </entry>
   <entry>
