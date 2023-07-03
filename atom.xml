@@ -6,7 +6,7 @@
   <link href="https://williamlin062.github.io/atom.xml" rel="self"/>
   
   <link href="https://williamlin062.github.io/"/>
-  <updated>2023-06-30T07:11:02.981Z</updated>
+  <updated>2023-07-03T09:40:34.154Z</updated>
   <id>https://williamlin062.github.io/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="https://williamlin062.github.io/2023/06/30/leetcode-189/"/>
     <id>https://williamlin062.github.io/2023/06/30/leetcode-189/</id>
     <published>2023-06-30T07:10:32.000Z</published>
-    <updated>2023-06-30T07:11:02.981Z</updated>
+    <updated>2023-07-03T09:40:34.154Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="施工中…"><a href="#施工中…" class="headerlink" title="施工中…"></a>施工中…</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;施工中…&quot;&gt;&lt;a href=&quot;#施工中…&quot; class=&quot;headerlink&quot; title=&quot;施工中…&quot;&gt;&lt;/a&gt;施工中…&lt;/h1&gt;</summary>
+      
     
     
     
@@ -36,9 +43,9 @@
     <link href="https://williamlin062.github.io/2023/06/30/VisualStudio%E5%A5%BD%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%8D%B5/"/>
     <id>https://williamlin062.github.io/2023/06/30/VisualStudio%E5%A5%BD%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%8D%B5/</id>
     <published>2023-06-30T06:07:12.000Z</published>
-    <updated>2023-06-30T06:11:12.163Z</updated>
+    <updated>2023-07-03T03:45:31.842Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="提取方法重構"><a href="#提取方法重構" class="headerlink" title="提取方法重構"></a>提取方法重構</h1><p><strong>功能:</strong> 將程式片段轉為方法</p><p><strong>快捷鍵:</strong> “Ctrl+R”+“Ctrl+M”</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="提取方法重構"><a href="#提取方法重構" class="headerlink" title="提取方法重構"></a>提取方法重構</h1><p><strong>功能:</strong> 將程式片段轉為方法</p><p><strong>快捷鍵:</strong> “Ctrl+R”+“Ctrl+M”</p><h1 id="多重選取"><a href="#多重選取" class="headerlink" title="多重選取"></a>多重選取</h1><ul><li>Ctrl+ Alt+ 單擊：添加輔助插入符</li><li>Ctrl+ Alt+ 雙擊：添加輔助單詞選擇</li><li>Ctrl+ Alt+ 單擊 + 拖動：添加輔助選擇</li><li>Shift+ Alt+ .：添加下一個匹配文本作為選擇</li><li>Shift+ Alt+ ;: 添加所有匹配的文本作為選擇</li><li>Shift+ Alt+ ,: 刪除最後選定的事件</li><li>Shift+ Alt+ &#x2F;: 跳過下一個匹配的出現</li><li>Alt+ 單擊：添加框選擇</li><li>Esc 或單擊：清除所有選擇</li></ul>]]></content>
     
     
       
@@ -73,9 +80,9 @@
     
     
     
-    <category term="C#" scheme="https://williamlin062.github.io/tags/C/"/>
-    
     <category term="MAUI" scheme="https://williamlin062.github.io/tags/MAUI/"/>
+    
+    <category term="C#" scheme="https://williamlin062.github.io/tags/C/"/>
     
     <category term="跨平台開發" scheme="https://williamlin062.github.io/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%96%8B%E7%99%BC/"/>
     
