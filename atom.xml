@@ -6,7 +6,7 @@
   <link href="https://williamlin062.github.io/atom.xml" rel="self"/>
   
   <link href="https://williamlin062.github.io/"/>
-  <updated>2023-07-03T09:40:34.154Z</updated>
+  <updated>2023-07-31T06:55:18.670Z</updated>
   <id>https://williamlin062.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重拾ReactNative(一)</title>
+    <link href="https://williamlin062.github.io/2023/07/14/%E9%87%8D%E6%8B%BEReactNative-1/"/>
+    <id>https://williamlin062.github.io/2023/07/14/%E9%87%8D%E6%8B%BEReactNative-1/</id>
+    <published>2023-07-14T07:13:44.000Z</published>
+    <updated>2023-07-31T06:55:18.670Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近主管終於放棄 Xamarin 改使用 ReactNative 開發 APP，作為提出建議的人這個任務最後也落到我頭上來了，記憶中最後一次使用 RN 已經是三年多前的事情了很多東西都不同了，於是只好在開發的過程中慢慢重新學習 ReactNative 還有其他的套件</p><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>經過思考過後決定使用 expo，原因如下:</p><ul><li>簡化開發流程</li><li>避免不必要的問題</li><li>速度還有方便性</li></ul><p>其餘主要使用的套件有:</p><ul><li>React Navigation</li><li>Redux</li><li>React Native Paper</li><li>React Native Render HTML</li><li>React Native Vector Icon</li></ul><p>另外為了避免 JavaScript 各種神奇的問題，還有挑戰自我這次使用 TypeScript 做為開發語言</p><h1 id="過程中遇到的各種問題"><a href="#過程中遇到的各種問題" class="headerlink" title="過程中遇到的各種問題"></a>過程中遇到的各種問題</h1><h3 id="TypeScript-型別"><a href="#TypeScript-型別" class="headerlink" title="TypeScript 型別"></a>TypeScript 型別</h3><p>TypeScript 作為 JavaScript 的超集提供了原本沒有的型別檢查功能，剛開始使用的時候在寫第一個 Component 的時候直接撞牆，這是一個類組建在 JavaScript 中是沒有問題的</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">App</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Component</span> &#123;</span><br><span class="line">  <span class="title function_">constrostor</span>(<span class="params">props</span>) &#123;&#125;</span><br><span class="line">  <span class="attr">state</span>: <span class="title class_">MyState</span> = &#123;</span><br><span class="line">    <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        &#123;this.props.message&#125; &#123;this.state.count&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但是在 TypeScript 中還要先定義他的參數、State 的型別不然 Ts 會報錯</p><h3 id="Redux-Toolkit"><a href="#Redux-Toolkit" class="headerlink" title="Redux Toolkit"></a>Redux Toolkit</h3><p>需要一個東西來管理全域都會使用到的資料比如使用者資訊，有考慮過三種方法</p><ol><li>使用global</li><li>RN的Context</li><li>Redux</li></ol><p>第一種感覺不是很好，畢竟資料一多一定會導致載入時間便很長而且難以維護，Context API 因為一開始都是用 Class Component寫的所以沒使用，第三種Redux 就是設定有點麻煩但是最後還是選他，但這次想試試看新的Redux toolkit</p><h4 id="Redux-Toolkit-1"><a href="#Redux-Toolkit-1" class="headerlink" title="Redux Toolkit"></a>Redux Toolkit</h4><blockquote><p>Redux <strong>Toolkit</strong>包旨在成為編寫<a href="https://redux.js.org/">Redux</a>邏輯的標準方法。它最初是為了幫助解決有關 Redux 的三個常見問題而創建的：</p><ul><li>“配置 Redux 存儲太複雜”</li><li>“我必須添加很多包才能讓 Redux 做任何有用的事情”</li><li>“Redux 需要太多樣板代碼”</li></ul><p>我們無法解決每個用例，但我們可以嘗試提供一些工具來抽象設置過程並處理最常見的用例，並包含一些有用的實用程序，讓用戶簡化他們的操作應用程序代碼。</p></blockquote><p>幾年前用Redux最大的問題就是有很多的配置還有套件要一起手動裝上 裝完Redux核心還要裝上Saga 、thunk… 裝完眼也花了還發現沒成功又要繼續翻文件 雖然最後還是弄好了但是安裝的使用體驗實在是很不好，官方並沒有提供如同<a href="https://github.com/facebook/create-react-app"><code>create-react-app</code></a> 這種一鍵安裝、開箱即用的工具，Redux Toolkit的出現解決了這三種問題讓配置過程簡單快速大大的減少使用上的挫敗感，而且 reducer action 也簡化成一個個slice 讓程式看起來更簡潔，缺點就是官方並沒有在文件說明怎麼跟Class component一起使用，網路上是說可以用connect但我是用 function component 將類組件包起來後將資料傳遞過去解決</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;最近主管終於放棄 Xamarin 改使用 ReactNative 開發 APP，作為提出建議的人這個任務最後也落到我頭上來了，記憶中最後一次</summary>
+      
+    
+    
+    
+    
+    <category term="ReactNative" scheme="https://williamlin062.github.io/tags/ReactNative/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 189</title>
@@ -80,9 +102,9 @@
     
     
     
-    <category term="MAUI" scheme="https://williamlin062.github.io/tags/MAUI/"/>
-    
     <category term="C#" scheme="https://williamlin062.github.io/tags/C/"/>
+    
+    <category term="MAUI" scheme="https://williamlin062.github.io/tags/MAUI/"/>
     
     <category term="跨平台開發" scheme="https://williamlin062.github.io/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E9%96%8B%E7%99%BC/"/>
     
@@ -464,28 +486,6 @@
     
     
     <category term="ASP.Net" scheme="https://williamlin062.github.io/tags/ASP-Net/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Asp.NET WebForm前端傳遞資料到C#</title>
-    <link href="https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/"/>
-    <id>https://williamlin062.github.io/2023/05/23/AspNET_WebForm_%E5%89%8D%E7%AB%AF%E5%82%B3%E9%81%9E%E8%B3%87%E6%96%99%E5%88%B0C#/</id>
-    <published>2023-05-23T06:43:01.000Z</published>
-    <updated>2023-06-08T09:26:46.428Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="使用-HiddenField"><a href="#使用-HiddenField" class="headerlink" title="使用 HiddenField"></a>使用 HiddenField</h1><h5 id="這是-ASP-的-HiddenField-控件"><a href="#這是-ASP-的-HiddenField-控件" class="headerlink" title="這是 ASP 的 HiddenField 控件"></a>這是 ASP 的 HiddenField 控件</h5><h6 id="屬性"><a href="#屬性" class="headerlink" title="屬性"></a>屬性</h6><ul><li>ID:ASP 的控件都會需要 ID 這會在 designer.aspx.cs 中使用 ID 名稱自動建立控件提供 aspx.cs 檔案操作控件</li><li>runat:標示為伺服器端控件讓伺服器端可以直接訪問</li><li>Value:可以填一些字串資料在裡面，hiddenField 會用 Post 方法回傳至伺服器端</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;asp:HiddenField ID=&quot;HiddenData&quot; runat=&quot;server&quot; Value=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure><h5 id="使用-JavaScript-填入資料"><a href="#使用-JavaScript-填入資料" class="headerlink" title="使用 JavaScript 填入資料"></a>使用 JavaScript 填入資料</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以用ID訪問元素</span></span><br><span class="line"><span class="keyword">var</span> hiddenField = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#HiddenData&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//跟一般的元素屬性操作一樣，指定vlaue為想要的字串就可以了</span><br><span class="line">hiddenField.value =&quot;我很隱密&quot;</span><br></pre></td></tr></table></figure><h5 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h5><h6 id="不能放一些敏感的資訊比如-Token-之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖-CallAPI"><a href="#不能放一些敏感的資訊比如-Token-之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖-CallAPI" class="headerlink" title="不能放一些敏感的資訊比如 Token 之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖 CallAPI"></a>不能放一些敏感的資訊比如 Token 之類的因為可以直接在前端看到並且修改，真的要傳遞資料還是乖乖 CallAPI</h6><h1 id="使用-POST"><a href="#使用-POST" class="headerlink" title="使用 POST"></a>使用 POST</h1><h6 id="每次有呼叫頁面都會觸發-WebForm-的-Page-load-事件，這時可以在這裡捕捉-Request-HttpMethod-如果是-POST-在做處裡也可以處裡其他事件"><a href="#每次有呼叫頁面都會觸發-WebForm-的-Page-load-事件，這時可以在這裡捕捉-Request-HttpMethod-如果是-POST-在做處裡也可以處裡其他事件" class="headerlink" title="每次有呼叫頁面都會觸發 WebForm 的 Page_load 事件，這時可以在這裡捕捉 Request.HttpMethod 如果是 POST 在做處裡也可以處裡其他事件"></a>每次有呼叫頁面都會觸發 WebForm 的 Page_load 事件，這時可以在這裡捕捉 Request.HttpMethod 如果是 POST 在做處裡也可以處裡其他事件</h6><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> reader = <span class="keyword">new</span> System.IO.StreamReader(Request.InputStream) )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">string</span> body = reader.ReadToEnd();</span><br><span class="line">    <span class="keyword">if</span> (Request.HttpMethod==<span class="string">&quot;POST&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//HandleFunc here</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="URL-參數"><a href="#URL-參數" class="headerlink" title="URL 參數"></a>URL 參數</h1><h5 id="PostBack-時在-Url-裡面塞參數帶回去在做處裡"><a href="#PostBack-時在-Url-裡面塞參數帶回去在做處裡" class="headerlink" title="PostBack 時在 Url 裡面塞參數帶回去在做處裡"></a>PostBack 時在 Url 裡面塞參數帶回去在做處裡</h5>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;使用-HiddenField&quot;&gt;&lt;a href=&quot;#使用-HiddenField&quot; class=&quot;headerlink&quot; title=&quot;使用 HiddenField&quot;&gt;&lt;/a&gt;使用 HiddenField&lt;/h1&gt;&lt;h5 id=&quot;這是-ASP-的-HiddenFi</summary>
-      
-    
-    
-    
-    
-    <category term="Asp.NET" scheme="https://williamlin062.github.io/tags/Asp-NET/"/>
     
   </entry>
   
